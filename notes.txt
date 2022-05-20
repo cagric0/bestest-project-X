@@ -1,0 +1,47 @@
+Extremely good Project X Project
+
+- Connector & Backend
+
+Backend+HTML (server):
+ - DB, HZ Cloud, Data Model nasil?   +
+ - Processing can be done via Jet   -
+ - REST API ile iletişim  +
+ - Auto issue creation  -
+ - Log visualization    -
+ - Log statistics, timeline, avg mean std loglines etc. per log level   -
+ - Visualize    -
+
+Connector (user):
+ - Log parsing (Zoltan script + thread dump + metric parsing + failure reason)  + -
+ - Github actions ile Jenkins connector  -----
+ - Visualize logic  -
+
+REST API /push:
+ - Set of log files     +
+ - Test status
+ - Metadata: Github info, Commit ID, repo, timestamp, platform information, s3 links, Jenkins link, Test name, Test status  -
+ - Visualize output (renk + indent + etc.)  -
+
+REST API /register:
+ - Github credentials, repo (auto register) -
+
+
+Future work:
+ - Auto commit detection (logic should be in connector) (reproducible in few tries)
+ - Find log difference (elastic search, similarity threshold)
+
+Slides:
+ - Chart of the architecture (use jet and hz cloud etc.)
+ - $Future work
+ - status quo
+   - s3ten log crime
+   - commit bulma acıları, regression tahmini
+   - surely issue acme control etme
+   - log parsing, daha iyi yapcaz valla
+   - thread dump analyzer, intellij, formati degistir
+
+Demo:
+ - DByi populate et
+ - Fail etmemiş bir seyi fail et
+ - Jenkinste gitmek test calistiracak sonra backendde show, data koy feature seti göster
+ - issue create et ve göster
