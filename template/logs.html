@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head> </head>
+<body>
+<center><h1>The logs for the {{.LogIdentifier}}</h1></center>
+<ul style="color:blue; display:table; margin:0 auto; font-size:20px; line-height: 2em;">
+    {{range .LogNames}}
+    <li> <a href="/log-detail/{{$.LogIdentifier}}/{{.}}">{{.}}</a></li>
+    {{end}}
+</ul>
+
+</body>
+</html>

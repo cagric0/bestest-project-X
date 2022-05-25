@@ -3,17 +3,17 @@ package api
 import (
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/hazelcast/hazelcast-go-client"
 	"log"
 	"net/http"
+	"projectXBackend/hazelcast"
 )
 
 type App struct {
 	Server *http.Server
-	Hz     *hazelcast.Client
+	Hz     *hazelcast.HZ
 }
 
-func StartApp(hz *hazelcast.Client) {
+func StartApp(hz *hazelcast.HZ) {
 	applicationPort := 3000
 	httpServer := &http.Server{Addr: fmt.Sprintf(":%d", applicationPort)}
 
@@ -29,9 +29,13 @@ func StartApp(hz *hazelcast.Client) {
 func (a *App) RegisterRoutes() {
 	r := mux.NewRouter()
 
+	r.HandleFunc("/", a.home).Methods("GET")
+	r.HandleFunc("/test-runs/{test-name}", a.testRunIDs).Methods("GET")
+	r.HandleFunc("/test-logs/{log-identifier}", a.testLogs).Methods("GET")
+	r.HandleFunc("/log-detail/{log-identifier}/{log-name}", a.testLogDetail).Methods("GET")
+
 	r.HandleFunc("/test", a.testHandler).Methods("GET")
 	r.HandleFunc("/push", a.pushHandler).Methods("POST")
-	r.HandleFunc("/logs", a.getLogsHandler).Methods("GET")
 
 	a.Server.Handler = r
 }

@@ -15,17 +15,22 @@ func NewJenkinsConnector() *Jenkins {
 func (j *Jenkins) LogParse(logFiles map[string]string, failedTests map[string][]string) (map[string]map[string]string, error) {
 	// - Log parsing (Zoltan script + thread dump + metric parsing + failure reason)
 	logsDetailedMap := make(map[string]map[string]string)
+
 	for className, logContent := range logFiles {
 		fmt.Println("PARSE STARTED", className)
 		// Extract test log
 		for _, failedTestName := range failedTests[className] {
+			if _, ok := logsDetailedMap[failedTestName]; !ok {
+				logsDetailedMap[failedTestName] = make(map[string]string)
+			}
 			cmd := exec.Command("/Users/cagriciftci/Desktop/bestest-project-X/hztest_zoltan.py", "--file", logContent, "--test", failedTestName)
 			out, err := cmd.Output()
 			if err != nil {
 				println(err.Error())
 				return nil, err
 			}
-			logsDetailedMap[failedTestName]["extracted_test_log"] = string(out)
+
+			logsDetailedMap[failedTestName]["extracted_log"] = string(out)
 
 			// fmt.Println(string(out))
 

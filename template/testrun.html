@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head> </head>
+<body>
+<center><h1>Tests Runs for the {{.TestName}}</h1></center>
+
+<ul style="color:blue; display:table; margin:0 auto; font-size:20px; line-height: 2em;">
+    {{range .RunIDs}}
+    <li> <a href="/test-logs/{{$.TestName}}_{{.}}">{{.}}</a></li>
+    {{end}}
+</ul>
+
+</body>
+</html>
