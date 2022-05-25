@@ -123,11 +123,18 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 	con := req.Metadata["connector"]
 	connector := cn.NewConnector(con)
 
-	parsedTestLogs, err := connector.LogParse(req.Logfiles, req.FailedTests)
+	runID := req.Metadata["runID"]
+
+	parsedTestLogs, err := connector.LogParse(req.Logfiles, req.FailedTests, runID)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		fmt.Fprintf(w, "Failed to parse log files: %v\n", err)
 		return
+	}
+
+	logMap, _ := a.Hz.GetMap(ctx, hz.LogMap)
+	for logIdentifier, logDetailedMap := range parsedTestLogs {
+		_, _ = logMap.Put(ctx, logIdentifier, logDetailedMap)
 	}
 
 	for k, v := range parsedTestLogs {

@@ -35,16 +35,20 @@ func GetHazelcastClient() *HZ {
 		fmt.Println(err)
 		panic(err)
 	}
-	_, err = client.GetMap(ctx, LogMap)
-	if err != nil {
-		fmt.Println(err)
-		panic(err)
-	}
-	_, err = client.GetMap(ctx, MetadataMap)
-	if err != nil {
-		fmt.Println(err)
-		panic(err)
-	}
+	//m, err := client.GetMap(ctx, LogMap)
+	//if err != nil {
+	//	fmt.Println(err)
+	//	panic(err)
+	//}
+	//m1, err := client.GetMap(ctx, MetadataMap)
+	//if err != nil {
+	//	fmt.Println(err)
+	//	panic(err)
+	//}
+	//m2, err := client.GetMap(ctx, TestMap)
+	//m.Clear(ctx)
+	//m1.Clear(ctx)
+	//m2.Clear(ctx)
 	return &HZ{client}
 }
 
@@ -67,7 +71,12 @@ func (hz *HZ) GetTestRunIDs(ctx context.Context, testName string) (interface{}, 
 		//return nil, fmt.Errorf("failed to get keys from map %s: %v", err)
 		return nil, nil
 	}
-	return testRunIDs, nil
+	testRunIdsMap := testRunIDs.(map[string]bool)
+	testRunIdList := make([]string, 0, len(testRunIdsMap))
+	for k := range testRunIdsMap {
+		testRunIdList = append(testRunIdList, k)
+	}
+	return testRunIdList, nil
 }
 
 func (hz *HZ) GetLogs(ctx context.Context, logIdentifier string) (interface{}, error) {
@@ -86,6 +95,24 @@ func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID
 
 	for _, testName := range testNames {
 		testRunIDs, _ := testMap.Get(ctx, testName)
-		testMap.Put(ctx, testName, append(testRunIDs.([]string), testRunID))
+		if testRunIDs == nil {
+			_, err := testMap.Put(ctx, testName, map[string]bool{testRunID: true})
+			if err != nil {
+				fmt.Println("AppendTestRunID Create", err)
+				return
+			}
+			continue
+		}
+		testRunIdMap := testRunIDs.(map[string]bool)
+		_, ok := testRunIdMap[testRunID]
+		if ok {
+			continue
+		}
+		testRunIdMap[testRunID] = true
+		_, err := testMap.Put(ctx, testName, testRunIdMap)
+		if err != nil {
+			fmt.Println("AppendTestRunID", err)
+			return
+		}
 	}
 }

@@ -1,0 +1,1299 @@
+10:24:15,755  INFO |testLatestWanProtocolIsSelected| - [WanThrottlingAcknowledger] testLatestWanProtocolIsSelected - [LOCAL] [A] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:16,180  INFO |testLatestWanProtocolIsSelected| - [logo] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:16,180  INFO |testLatestWanProtocolIsSelected| - [system] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:16,180  INFO |testLatestWanProtocolIsSelected| - [system] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5701
+10:24:16,180  INFO |testLatestWanProtocolIsSelected| - [system] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Cluster name: A
+10:24:16,180  INFO |testLatestWanProtocolIsSelected| - [NodeExtension] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:16,180  INFO |testLatestWanProtocolIsSelected| - [NodeExtension] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:16,192  WARN |testLatestWanProtocolIsSelected| - [CPSubsystem] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:16,208  INFO |testLatestWanProtocolIsSelected| - [EnterpriseJetServiceBackend] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:16,210  INFO |testLatestWanProtocolIsSelected| - [Diagnostics] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:16,210  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTING
+10:24:16,211  INFO |testLatestWanProtocolIsSelected| - [JetExtension] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Jet is enabled
+10:24:16,211  INFO |testLatestWanProtocolIsSelected| - [ClusterService] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5701 - 4dd68a14-9df8-4459-b55e-fd8165472747 this
+]
+
+10:24:16,211  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTED
+10:24:16,211  INFO |testLatestWanProtocolIsSelected| - [PartitionStateManager] testLatestWanProtocolIsSelected - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:16,211  INFO |testLatestWanProtocolIsSelected| - [WanThrottlingAcknowledger] testLatestWanProtocolIsSelected - [LOCAL] [B] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [logo] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [system] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [system] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5801
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [system] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Cluster name: B
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [NodeExtension] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [NodeExtension] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:16,212  INFO |testLatestWanProtocolIsSelected| - [HealthMonitor] hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.HealthMonitor - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=77.3G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=224.9M, heap.memory.free=774.1M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=22.48%, heap.memory.used/max=22.48%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=14.29%, load.system=100.00%, load.systemAverage=29.88, thread.count=46, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:16,224  WARN |testLatestWanProtocolIsSelected| - [CPSubsystem] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:16,227  INFO |testLatestWanProtocolIsSelected| - [EnterpriseJetServiceBackend] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:16,230  INFO |testLatestWanProtocolIsSelected| - [Diagnostics] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:16,230  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTING
+10:24:16,230  INFO |testLatestWanProtocolIsSelected| - [JetExtension] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Jet is enabled
+10:24:16,230  INFO |testLatestWanProtocolIsSelected| - [ClusterService] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5801 - 68a932d2-b182-4b68-9cf3-03c0ac8632ae this
+]
+
+10:24:16,231  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTED
+10:24:16,231  INFO |testLatestWanProtocolIsSelected| - [PartitionStateManager] testLatestWanProtocolIsSelected - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:16,233  INFO |testLatestWanProtocolIsSelected| - [HealthMonitor] hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.HealthMonitor - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=77.3G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=234.6M, heap.memory.free=764.4M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=23.46%, heap.memory.used/max=23.46%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=6.67%, load.system=100.00%, load.systemAverage=29.88, thread.count=66, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:16,254  INFO |testLatestWanProtocolIsSelected| - [WanMapTestSupport] testLatestWanProtocolIsSelected - Filling map dummyMap [0,10)
+10:24:16,256  INFO |testLatestWanProtocolIsSelected| - [MockServer] hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-68a932d2-b182-4b68-9cf3-03c0ac8632ae, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=4dd68a14-9df8-4459-b55e-fd8165472747], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=68a932d2-b182-4b68-9cf3-03c0ac8632ae], alive=true}
+10:24:16,259  INFO |testLatestWanProtocolIsSelected| - [MockServer] hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-4dd68a14-9df8-4459-b55e-fd8165472747, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=68a932d2-b182-4b68-9cf3-03c0ac8632ae], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=4dd68a14-9df8-4459-b55e-fd8165472747], alive=true}
+THREAD DUMP FOR TEST FAILURE: "expected:<1.2> but was:<1.0>" at "testLatestWanProtocolIsSelected"
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2336" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@21ca139c, cpu=24199 nsecs, usr=0 nsecs, blocked=0 msecs, waited=211 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2335" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@226f885f, cpu=44912 nsecs, usr=0 nsecs, blocked=0 msecs, waited=211 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2334" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2cd2c8fe, cpu=25572 nsecs, usr=0 nsecs, blocked=0 msecs, waited=211 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2333" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7d61eccf, cpu=27670 nsecs, usr=0 nsecs, blocked=0 msecs, waited=211 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2332" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@cc6460c, cpu=26072 nsecs, usr=0 nsecs, blocked=0 msecs, waited=211 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2331" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@52350abb, cpu=26033 nsecs, usr=0 nsecs, blocked=0 msecs, waited=211 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2330" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@681aad3b, cpu=23966 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2329" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1a6f2363, cpu=26353 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2328" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2427e004, cpu=22722 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2327" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ebd56e9, cpu=140327 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2326" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@63f34b70, cpu=61218 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2325" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@641856, cpu=71815 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2324" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b58ff9e, cpu=45764 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2323" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2f66e802, cpu=33225 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2322" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@56b78e55, cpu=27987 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.wan-2321" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@76318a7d, cpu=222728 nsecs, usr=0 nsecs, blocked=0 msecs, waited=212 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.MockConnectionManager.thread-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2a492f2a, cpu=97814 nsecs, usr=0 nsecs, blocked=0 msecs, waited=313 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-6" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3277e499, cpu=56145 nsecs, usr=0 nsecs, blocked=0 msecs, waited=322 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-5" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3277e499, cpu=241671 nsecs, usr=0 nsecs, blocked=0 msecs, waited=322 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-4" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3277e499, cpu=84645 nsecs, usr=0 nsecs, blocked=0 msecs, waited=322 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-3" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3277e499, cpu=189457 nsecs, usr=0 nsecs, blocked=0 msecs, waited=322 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-2" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3277e499, cpu=252632 nsecs, usr=0 nsecs, blocked=0 msecs, waited=322 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.HealthMonitor" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=2884152 nsecs, usr=0 nsecs, blocked=0 msecs, waited=340 msecs
+		at java.lang.Thread.sleep(Native Method)
+		at java.lang.Thread.sleep(Thread.java:340)
+		at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
+		at com.hazelcast.internal.diagnostics.HealthMonitor$HealthMonitorThread.run(HealthMonitor.java:163)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-1" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3277e499, cpu=274688 nsecs, usr=0 nsecs, blocked=0 msecs, waited=343 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0-query-state-checker" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=42585 nsecs, usr=0 nsecs, blocked=0 msecs, waited=343 msecs
+		at java.lang.Thread.sleep(Native Method)
+		at com.hazelcast.sql.impl.state.QueryStateRegistryUpdater$Worker.run(QueryStateRegistryUpdater.java:114)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.SlowOperationDetectorThread" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=54669 nsecs, usr=0 nsecs, blocked=0 msecs, waited=345 msecs
+		at java.lang.Thread.sleep(Native Method)
+		at java.lang.Thread.sleep(Thread.java:340)
+		at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
+		at com.hazelcast.spi.impl.operationexecutor.slowoperationdetector.SlowOperationDetector$DetectorThread.sleepInterval(SlowOperationDetector.java:289)
+		at com.hazelcast.spi.impl.operationexecutor.slowoperationdetector.SlowOperationDetector$DetectorThread.run(SlowOperationDetector.java:154)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.response-1" 
+	java.lang.Thread.State: WAITING, cpu=60587 nsecs, usr=0 nsecs, blocked=0 msecs, waited=345 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:231)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.doRun(InboundResponseHandlerSupplier.java:295)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.executeRun(InboundResponseHandlerSupplier.java:284)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.response-0" 
+	java.lang.Thread.State: WAITING, cpu=57947 nsecs, usr=0 nsecs, blocked=0 msecs, waited=345 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.doRun(InboundResponseHandlerSupplier.java:295)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.executeRun(InboundResponseHandlerSupplier.java:284)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.generic-operation.thread-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@585811a4, cpu=2042436 nsecs, usr=0 nsecs, blocked=0 msecs, waited=343 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.generic-operation.thread-0" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@585811a4, cpu=495840 nsecs, usr=0 nsecs, blocked=0 msecs, waited=345 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.priority-generic-operation.thread-0" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@22c01ab0, cpu=705684 nsecs, usr=0 nsecs, blocked=0 msecs, waited=344 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:76)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.partition-operation.thread-1" 
+	java.lang.Thread.State: WAITING, cpu=321864 nsecs, usr=0 nsecs, blocked=0 msecs, waited=346 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.partition-operation.thread-0" 
+	java.lang.Thread.State: WAITING, cpu=588970 nsecs, usr=0 nsecs, blocked=0 msecs, waited=345 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.InvocationMonitorThread" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@411341bd, cpu=989007 nsecs, usr=0 nsecs, blocked=0 msecs, waited=319 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.jet.cooperative.thread-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.Semaphore$NonfairSync@4c4d362a, cpu=81490 nsecs, usr=0 nsecs, blocked=0 msecs, waited=347 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:997)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1304)
+		at java.util.concurrent.Semaphore.acquire(Semaphore.java:312)
+		at com.hazelcast.jet.impl.execution.TaskletExecutionService$CooperativeWorker.run(TaskletExecutionService.java:365)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.jet.cooperative.thread-0" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.Semaphore$NonfairSync@5400db36, cpu=71656 nsecs, usr=0 nsecs, blocked=0 msecs, waited=347 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:997)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1304)
+		at java.util.concurrent.Semaphore.acquire(Semaphore.java:312)
+		at com.hazelcast.jet.impl.execution.TaskletExecutionService$CooperativeWorker.run(TaskletExecutionService.java:365)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.migration" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@76b74e9c, cpu=62625 nsecs, usr=0 nsecs, blocked=0 msecs, waited=347 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+		at com.hazelcast.internal.partition.impl.MigrationQueue.poll(MigrationQueue.java:48)
+		at com.hazelcast.internal.partition.impl.MigrationThread.doRun(MigrationThread.java:91)
+		at com.hazelcast.internal.partition.impl.MigrationThread.run(MigrationThread.java:66)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.MetricsRegistry.thread-2" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2d72f75e, cpu=39715 nsecs, usr=0 nsecs, blocked=0 msecs, waited=350 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.MetricsRegistry.thread-1" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2d72f75e, cpu=99868 nsecs, usr=0 nsecs, blocked=0 msecs, waited=350 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.operation-parker" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@8ab78bc, cpu=43609 nsecs, usr=0 nsecs, blocked=0 msecs, waited=354 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.DelayQueue.poll(DelayQueue.java:259)
+		at com.hazelcast.spi.impl.operationparker.impl.OperationParkerImpl$ExpirationTask.doRun(OperationParkerImpl.java:228)
+		at com.hazelcast.spi.impl.operationparker.impl.OperationParkerImpl$ExpirationTask.run(OperationParkerImpl.java:211)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.event-2320" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5aa0dbf4, cpu=78715 nsecs, usr=0 nsecs, blocked=0 msecs, waited=354 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.scheduled.thread-" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@16afbd92, cpu=805525 nsecs, usr=0 nsecs, blocked=0 msecs, waited=339 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.cached.thread-4" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=3976967 nsecs, usr=0 nsecs, blocked=0 msecs, waited=359 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338)
+		at com.hazelcast.internal.util.concurrent.BackoffIdleStrategy.idle(BackoffIdleStrategy.java:83)
+		at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.run(WanBatchPublisher.java:148)
+		at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.HealthMonitor" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=1615269 nsecs, usr=0 nsecs, blocked=0 msecs, waited=361 msecs
+		at java.lang.Thread.sleep(Native Method)
+		at java.lang.Thread.sleep(Thread.java:340)
+		at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
+		at com.hazelcast.internal.diagnostics.HealthMonitor$HealthMonitorThread.run(HealthMonitor.java:163)
+
+"ClusterA-91e45001-7398-4c31-bc53-a312e88b48500-query-state-checker" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=36535 nsecs, usr=0 nsecs, blocked=0 msecs, waited=363 msecs
+		at java.lang.Thread.sleep(Native Method)
+		at com.hazelcast.sql.impl.state.QueryStateRegistryUpdater$Worker.run(QueryStateRegistryUpdater.java:114)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.SlowOperationDetectorThread" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=36662 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at java.lang.Thread.sleep(Native Method)
+		at java.lang.Thread.sleep(Thread.java:340)
+		at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
+		at com.hazelcast.spi.impl.operationexecutor.slowoperationdetector.SlowOperationDetector$DetectorThread.sleepInterval(SlowOperationDetector.java:289)
+		at com.hazelcast.spi.impl.operationexecutor.slowoperationdetector.SlowOperationDetector$DetectorThread.run(SlowOperationDetector.java:154)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.response-1" 
+	java.lang.Thread.State: WAITING, cpu=44020 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.doRun(InboundResponseHandlerSupplier.java:295)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.executeRun(InboundResponseHandlerSupplier.java:284)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.response-0" 
+	java.lang.Thread.State: WAITING, cpu=162957 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.doRun(InboundResponseHandlerSupplier.java:295)
+		at com.hazelcast.spi.impl.operationservice.impl.InboundResponseHandlerSupplier$ResponseThread.executeRun(InboundResponseHandlerSupplier.java:284)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.generic-operation.thread-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2c5d601e, cpu=116308 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.generic-operation.thread-0" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2c5d601e, cpu=123939 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.priority-generic-operation.thread-0" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7fe083b1, cpu=117825 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:76)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.partition-operation.thread-1" 
+	java.lang.Thread.State: WAITING, cpu=242431 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.partition-operation.thread-0" 
+	java.lang.Thread.State: WAITING, cpu=1572771 nsecs, usr=0 nsecs, blocked=0 msecs, waited=364 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.takeAll(MPSCQueue.java:229)
+		at com.hazelcast.internal.util.concurrent.MPSCQueue.take(MPSCQueue.java:151)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationQueueImpl.take(OperationQueueImpl.java:85)
+		at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.executeRun(OperationThread.java:118)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.InvocationMonitorThread" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@23c388c2, cpu=1550903 nsecs, usr=0 nsecs, blocked=0 msecs, waited=363 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.cached.thread-3" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@486be205, cpu=406120 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.cached.thread-2" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@486be205, cpu=87094 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.jet.cooperative.thread-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.Semaphore$NonfairSync@f713686, cpu=69332 nsecs, usr=0 nsecs, blocked=0 msecs, waited=366 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:997)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1304)
+		at java.util.concurrent.Semaphore.acquire(Semaphore.java:312)
+		at com.hazelcast.jet.impl.execution.TaskletExecutionService$CooperativeWorker.run(TaskletExecutionService.java:365)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.jet.cooperative.thread-0" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.Semaphore$NonfairSync@74f7d1d2, cpu=72835 nsecs, usr=0 nsecs, blocked=0 msecs, waited=366 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:997)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1304)
+		at java.util.concurrent.Semaphore.acquire(Semaphore.java:312)
+		at com.hazelcast.jet.impl.execution.TaskletExecutionService$CooperativeWorker.run(TaskletExecutionService.java:365)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.cached.thread-1" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@486be205, cpu=1328599 nsecs, usr=0 nsecs, blocked=0 msecs, waited=365 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.migration" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4b4dd216, cpu=64275 nsecs, usr=0 nsecs, blocked=0 msecs, waited=366 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+		at com.hazelcast.internal.partition.impl.MigrationQueue.poll(MigrationQueue.java:48)
+		at com.hazelcast.internal.partition.impl.MigrationThread.doRun(MigrationThread.java:91)
+		at com.hazelcast.internal.partition.impl.MigrationThread.run(MigrationThread.java:66)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.MetricsRegistry.thread-2" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ca17ab0, cpu=48067 nsecs, usr=0 nsecs, blocked=0 msecs, waited=382 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.MetricsRegistry.thread-1" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ca17ab0, cpu=125571 nsecs, usr=0 nsecs, blocked=0 msecs, waited=382 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.operation-parker" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5a62b2a4, cpu=30811 nsecs, usr=0 nsecs, blocked=0 msecs, waited=386 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.DelayQueue.poll(DelayQueue.java:259)
+		at com.hazelcast.spi.impl.operationparker.impl.OperationParkerImpl$ExpirationTask.doRun(OperationParkerImpl.java:228)
+		at com.hazelcast.spi.impl.operationparker.impl.OperationParkerImpl$ExpirationTask.run(OperationParkerImpl.java:211)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.event-2319" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1051817b, cpu=99583 nsecs, usr=0 nsecs, blocked=0 msecs, waited=386 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at com.hazelcast.internal.util.executor.StripedExecutor$Worker.run(StripedExecutor.java:227)
+
+"hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.scheduled.thread-" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@35293c05, cpu=586865 nsecs, usr=0 nsecs, blocked=0 msecs, waited=386 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+		at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102)
+
+"ForkJoinPool.commonPool-worker-14" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=1545705 nsecs, usr=0 nsecs, blocked=0 msecs, waited=30822 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-6" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=1274540 nsecs, usr=0 nsecs, blocked=0 msecs, waited=30822 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-3" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=3915534 nsecs, usr=0 nsecs, blocked=0 msecs, waited=30819 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-12" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=1796534 nsecs, usr=0 nsecs, blocked=0 msecs, waited=30822 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-5" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=1500633 nsecs, usr=0 nsecs, blocked=0 msecs, waited=30822 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-13" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=693487 nsecs, usr=0 nsecs, blocked=0 msecs, waited=30823 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-11" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=5935478 nsecs, usr=0 nsecs, blocked=0 msecs, waited=66484 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-2" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=6517900 nsecs, usr=0 nsecs, blocked=0 msecs, waited=117252 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-9" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=2077655 nsecs, usr=0 nsecs, blocked=0 msecs, waited=117255 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-8" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=3373608 nsecs, usr=0 nsecs, blocked=0 msecs, waited=156339 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-7" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=3709138 nsecs, usr=0 nsecs, blocked=0 msecs, waited=156338 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"ForkJoinPool.commonPool-worker-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=5433341 nsecs, usr=0 nsecs, blocked=0 msecs, waited=156338 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"pool-396-thread-1" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2db2dd9d, cpu=15150416 nsecs, usr=0 nsecs, blocked=0 msecs, waited=357856 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+		at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"ForkJoinPool.commonPool-worker-15" 
+	java.lang.Thread.State: WAITING, on lock=java.util.concurrent.ForkJoinPool@620aa4ea, cpu=133135852 nsecs, usr=90000000 nsecs, blocked=0 msecs, waited=407657 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1835)
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1704)
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+
+"JitterThread" 
+	java.lang.Thread.State: TIMED_WAITING, cpu=708883711 nsecs, usr=530000000 nsecs, blocked=0 msecs, waited=421144 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338)
+		at com.hazelcast.test.jitter.JitterThread.sleepNanos(JitterThread.java:56)
+		at com.hazelcast.test.jitter.JitterThread.run(JitterThread.java:41)
+
+"process reaper" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.SynchronousQueue$TransferStack@3174cb09, cpu=140932001 nsecs, usr=20000000 nsecs, blocked=48 msecs, waited=419691 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+		at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+		at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"surefire-forkedjvm-ping-30s" 
+	java.lang.Thread.State: TIMED_WAITING, on lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4d411036, cpu=309042837 nsecs, usr=230000000 nsecs, blocked=12 msecs, waited=419063 msecs
+		at sun.misc.Unsafe.park(Native Method)
+		at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+		at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+		at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+		at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at java.lang.Thread.run(Thread.java:748)
+
+"surefire-forkedjvm-command-thread" 
+	java.lang.Thread.State: RUNNABLE, cpu=8916470 nsecs, usr=0 nsecs, blocked=0 msecs, waited=0 msecs
+		at java.io.FileInputStream.readBytes(Native Method)
+		at java.io.FileInputStream.read(FileInputStream.java:255)
+		at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+		at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+		at java.io.DataInputStream.readInt(DataInputStream.java:387)
+		at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+		at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+		at java.lang.Thread.run(Thread.java:748)
+
+"Signal Dispatcher" 
+	java.lang.Thread.State: RUNNABLE, cpu=97948 nsecs, usr=0 nsecs, blocked=0 msecs, waited=0 msecs
+
+"Finalizer" 
+	java.lang.Thread.State: WAITING, on lock=java.lang.ref.ReferenceQueue$Lock@41beb473, cpu=69120795 nsecs, usr=50000000 nsecs, blocked=16 msecs, waited=421925 msecs
+		at java.lang.Object.wait(Native Method)
+		at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+		at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+		at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" 
+	java.lang.Thread.State: WAITING, on lock=java.lang.ref.Reference$Lock@560513ce, cpu=49431002 nsecs, usr=40000000 nsecs, blocked=62 msecs, waited=421955 msecs
+		at java.lang.Object.wait(Native Method)
+		at java.lang.Object.wait(Object.java:502)
+		at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+		at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+10:24:16,579  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTTING_DOWN
+10:24:16,579  INFO |testLatestWanProtocolIsSelected| - [MigrationManager] hz.ClusterB-bdc012d8-5ae1-45e2-9f25-d240fa5908fd0.cached.thread-1 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5801 - 68a932d2-b182-4b68-9cf3-03c0ac8632ae this is handled
+10:24:16,580  INFO |testLatestWanProtocolIsSelected| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:16,580  INFO |testLatestWanProtocolIsSelected| - [MockServer] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=68a932d2-b182-4b68-9cf3-03c0ac8632ae], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=4dd68a14-9df8-4459-b55e-fd8165472747], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=68a932d2-b182-4b68-9cf3-03c0ac8632ae], alive=false}
+10:24:16,580  INFO |testLatestWanProtocolIsSelected| - [MockServer] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=4dd68a14-9df8-4459-b55e-fd8165472747], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=68a932d2-b182-4b68-9cf3-03c0ac8632ae], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=4dd68a14-9df8-4459-b55e-fd8165472747], alive=false}
+10:24:16,580  INFO |testLatestWanProtocolIsSelected| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:16,582  INFO |testLatestWanProtocolIsSelected| - [NodeExtension] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:16,582  INFO |testLatestWanProtocolIsSelected| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 3 ms.
+10:24:16,582  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTDOWN
+10:24:16,582  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTTING_DOWN
+10:24:16,582  INFO |testLatestWanProtocolIsSelected| - [MigrationManager] hz.ClusterA-91e45001-7398-4c31-bc53-a312e88b48500.cached.thread-1 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5701 - 4dd68a14-9df8-4459-b55e-fd8165472747 this is handled
+10:24:16,583  INFO |testLatestWanProtocolIsSelected| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:16,583  INFO |testLatestWanProtocolIsSelected| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:16,737  INFO |testLatestWanProtocolIsSelected| - [NodeExtension] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:16,737  INFO |testLatestWanProtocolIsSelected| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 155 ms.
+10:24:16,737  INFO |testLatestWanProtocolIsSelected| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTDOWN
+BuildInfo right after testLatestWanProtocolIsSelected(com.hazelcast.wan.WanProtocolVersionSelectionTest): BuildInfo{version='5.1-SNAPSHOT', build='20220119', buildNumber=20220119, revision=9fa69ca, enterprise=true, serializationVersion=1, upstream=BuildInfo{version='5.1-SNAPSHOT', build='20220119', buildNumber=20220119, revision=4d6b666, enterprise=false, serializationVersion=1}}
+Hiccups measured while running test 'testLatestWanProtocolIsSelected(com.hazelcast.wan.WanProtocolVersionSelectionTest):'
+10:24:15, accumulated pauses: 181 ms, max pause: 110 ms, pauses over 1000 ms: 0
+
+
+No metrics recorded during the test
+Finished Running Test: testLatestWanProtocolIsSelected in 0.995 seconds.
+Started Running Test: testNoMatchingProtocol
+10:24:16,745  INFO |testNoMatchingProtocol| - [WanThrottlingAcknowledger] testNoMatchingProtocol - [LOCAL] [A] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:16,746  INFO |testNoMatchingProtocol| - [logo] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:16,747  INFO |testNoMatchingProtocol| - [system] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:16,747  INFO |testNoMatchingProtocol| - [system] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5701
+10:24:16,747  INFO |testNoMatchingProtocol| - [system] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Cluster name: A
+10:24:16,747  INFO |testNoMatchingProtocol| - [NodeExtension] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:16,747  INFO |testNoMatchingProtocol| - [NodeExtension] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:16,764  WARN |testNoMatchingProtocol| - [CPSubsystem] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:16,767  INFO |testNoMatchingProtocol| - [EnterpriseJetServiceBackend] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:16,769  INFO |testNoMatchingProtocol| - [Diagnostics] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:16,769  INFO |testNoMatchingProtocol| - [LifecycleService] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTING
+10:24:16,769  INFO |testNoMatchingProtocol| - [JetExtension] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Jet is enabled
+10:24:16,769  INFO |testNoMatchingProtocol| - [ClusterService] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5701 - 159bfb94-c0c4-4331-b262-31261c33a185 this
+]
+
+10:24:16,770  INFO |testNoMatchingProtocol| - [LifecycleService] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTED
+10:24:16,770  INFO |testNoMatchingProtocol| - [PartitionStateManager] testNoMatchingProtocol - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:16,770  INFO |testNoMatchingProtocol| - [WanThrottlingAcknowledger] testNoMatchingProtocol - [LOCAL] [B] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:16,770  INFO |testNoMatchingProtocol| - [logo] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:16,770  INFO |testNoMatchingProtocol| - [system] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:16,770  INFO |testNoMatchingProtocol| - [system] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5801
+10:24:16,770  INFO |testNoMatchingProtocol| - [system] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Cluster name: B
+10:24:16,770  INFO |testNoMatchingProtocol| - [NodeExtension] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:16,770  INFO |testNoMatchingProtocol| - [NodeExtension] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:16,772  INFO |testNoMatchingProtocol| - [HealthMonitor] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.HealthMonitor - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=77.3G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=253.9M, heap.memory.free=745.1M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=25.36%, heap.memory.used/max=25.36%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=0.00%, load.system=100.00%, load.systemAverage=29.88, thread.count=46, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:16,783  WARN |testNoMatchingProtocol| - [CPSubsystem] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:16,786  INFO |testNoMatchingProtocol| - [EnterpriseJetServiceBackend] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:16,788  INFO |testNoMatchingProtocol| - [Diagnostics] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:16,788  INFO |testNoMatchingProtocol| - [LifecycleService] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTING
+10:24:16,788  INFO |testNoMatchingProtocol| - [JetExtension] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Jet is enabled
+10:24:16,788  INFO |testNoMatchingProtocol| - [ClusterService] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5801 - 7385142c-b118-4ab8-8df4-a014b37e64fc this
+]
+
+10:24:16,789  INFO |testNoMatchingProtocol| - [LifecycleService] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTED
+10:24:16,789  INFO |testNoMatchingProtocol| - [PartitionStateManager] testNoMatchingProtocol - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:16,789  INFO |testNoMatchingProtocol| - [WanMapTestSupport] testNoMatchingProtocol - Filling map dummyMap [0,10)
+10:24:16,790  INFO |testNoMatchingProtocol| - [HealthMonitor] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.HealthMonitor - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=77.2G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=263.5M, heap.memory.free=735.5M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=26.34%, heap.memory.used/max=26.34%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=0.00%, load.system=100.00%, load.systemAverage=29.88, thread.count=69, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:16,791  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-7385142c-b118-4ab8-8df4-a014b37e64fc, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], alive=true}
+10:24:16,792  INFO |testNoMatchingProtocol| - [WanProtocolNegotiationOperation] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] WAN protocol negotiation from (A , [127.0.0.1]:5701) failed because no matching WAN protocol versions were found. Source member supports [1.1, 1.0], target supports [1.2]
+10:24:16,792  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-159bfb94-c0c4-4331-b262-31261c33a185, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], alive=true}
+10:24:16,892  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-4 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], alive=false}
+10:24:16,892  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], alive=false}
+10:24:16,892  WARN |testNoMatchingProtocol| - [WanConnectionManager] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Failed to establish a connection to a WAN endpoint
+com.hazelcast.enterprise.wan.impl.connection.WanConnectionException: WAN protocol negotiation failed for cluster name B and target [127.0.0.1]:5801 with status PROTOCOL_MISMATCH
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.negotiateWanProtocol(WanConnectionManager.java:412) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.connectAndNegotiate(WanConnectionManager.java:352) ~[classes/:?]
+	at com.hazelcast.internal.util.ConcurrencyUtil.getOrPutSynchronized(ConcurrencyUtil.java:120) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnectionByTargetAddress(WanConnectionManager.java:307) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnection(WanConnectionManager.java:218) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.DefaultWanBatchSender.send(DefaultWanBatchSender.java:42) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.sendBatch(WanBatchPublisher.java:317) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.tryMakeProgress(WanBatchPublisher.java:199) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.run(WanBatchPublisher.java:145) [classes/:?]
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+10:24:26,791  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-1 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-7385142c-b118-4ab8-8df4-a014b37e64fc, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], alive=true}
+10:24:26,793  INFO |testNoMatchingProtocol| - [WanProtocolNegotiationOperation] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] WAN protocol negotiation from (A , [127.0.0.1]:5701) failed because no matching WAN protocol versions were found. Source member supports [1.1, 1.0], target supports [1.2]
+10:24:26,793  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-159bfb94-c0c4-4331-b262-31261c33a185, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], alive=true}
+10:24:26,893  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-1 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], alive=false}
+10:24:26,893  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-1 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], alive=false}
+10:24:26,893  WARN |testNoMatchingProtocol| - [WanConnectionManager] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-1 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Failed to establish a connection to a WAN endpoint
+com.hazelcast.enterprise.wan.impl.connection.WanConnectionException: WAN protocol negotiation failed for cluster name B and target [127.0.0.1]:5801 with status PROTOCOL_MISMATCH
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.negotiateWanProtocol(WanConnectionManager.java:412) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.connectAndNegotiate(WanConnectionManager.java:352) ~[classes/:?]
+	at com.hazelcast.internal.util.ConcurrencyUtil.getOrPutSynchronized(ConcurrencyUtil.java:120) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnectionByTargetAddress(WanConnectionManager.java:307) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnection(WanConnectionManager.java:218) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.DefaultWanBatchSender.send(DefaultWanBatchSender.java:42) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.sendBatch(WanBatchPublisher.java:317) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.handleWanBatchResponse(WanBatchPublisher.java:357) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.lambda$sendBatch$0(WanBatchPublisher.java:320) ~[classes/:?]
+	at com.hazelcast.spi.impl.DeserializingCompletableFuture$DeserializingBiConsumer.accept(DeserializingCompletableFuture.java:393) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+10:24:36,774  INFO |testNoMatchingProtocol| - [HealthMonitor] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.HealthMonitor - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=74.9G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=281.2M, heap.memory.free=717.7M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=28.12%, heap.memory.used/max=28.12%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=0.00%, load.system=100.00%, load.systemAverage=28.84, thread.count=85, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=10, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=2, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:36,791  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-1 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-7385142c-b118-4ab8-8df4-a014b37e64fc, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], alive=true}
+10:24:36,791  INFO |testNoMatchingProtocol| - [WanProtocolNegotiationOperation] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] WAN protocol negotiation from (A , [127.0.0.1]:5701) failed because no matching WAN protocol versions were found. Source member supports [1.1, 1.0], target supports [1.2]
+10:24:36,791  INFO |testNoMatchingProtocol| - [MockServer] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-159bfb94-c0c4-4331-b262-31261c33a185, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], alive=true}
+10:24:36,792  INFO |testNoMatchingProtocol| - [HealthMonitor] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.HealthMonitor - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=74.9G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=282.2M, heap.memory.free=716.8M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=28.21%, heap.memory.used/max=28.21%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=10.00%, load.system=100.00%, load.systemAverage=28.84, thread.count=86, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=243, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=2, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:36,803  INFO |testNoMatchingProtocol| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTTING_DOWN
+10:24:36,804  INFO |testNoMatchingProtocol| - [MigrationManager] hz.ClusterB-22284559-16e9-4efc-978a-9c1ddb8b706c0.cached.thread-6 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5801 - 7385142c-b118-4ab8-8df4-a014b37e64fc this is handled
+10:24:36,804  INFO |testNoMatchingProtocol| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:36,804  INFO |testNoMatchingProtocol| - [MockServer] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], alive=false}
+10:24:36,804  INFO |testNoMatchingProtocol| - [MockServer] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=7385142c-b118-4ab8-8df4-a014b37e64fc], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=159bfb94-c0c4-4331-b262-31261c33a185], alive=false}
+10:24:36,804  INFO |testNoMatchingProtocol| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:36,804  WARN |testNoMatchingProtocol| - [WanConnectionManager] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-1 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Failed to establish a connection to a WAN endpoint
+com.hazelcast.enterprise.wan.impl.connection.WanConnectionException: WAN protocol negotiation failed for cluster name B and target [127.0.0.1]:5801
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.negotiateWanProtocol(WanConnectionManager.java:412) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.connectAndNegotiate(WanConnectionManager.java:352) ~[classes/:?]
+	at com.hazelcast.internal.util.ConcurrencyUtil.getOrPutSynchronized(ConcurrencyUtil.java:120) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnectionByTargetAddress(WanConnectionManager.java:307) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnection(WanConnectionManager.java:218) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.DefaultWanBatchSender.send(DefaultWanBatchSender.java:42) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.sendBatch(WanBatchPublisher.java:317) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.handleWanBatchResponse(WanBatchPublisher.java:357) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.lambda$sendBatch$0(WanBatchPublisher.java:320) ~[classes/:?]
+	at com.hazelcast.spi.impl.DeserializingCompletableFuture$DeserializingBiConsumer.accept(DeserializingCompletableFuture.java:393) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+Caused by: com.hazelcast.core.MemberLeftException: Endpoint [127.0.0.1]:5801 has left
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationMonitor$OnEndpointLeftTask.run0(InvocationMonitor.java:375) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationMonitor$MonitorTask.run(InvocationMonitor.java:255) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_311]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_311]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[?:1.8.0_311]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_311]
+10:24:36,806  INFO |testNoMatchingProtocol| - [NodeExtension] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:36,806  INFO |testNoMatchingProtocol| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 3 ms.
+10:24:36,806  INFO |testNoMatchingProtocol| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTDOWN
+10:24:36,806  INFO |testNoMatchingProtocol| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTTING_DOWN
+10:24:36,806  INFO |testNoMatchingProtocol| - [MigrationManager] hz.ClusterA-1035059e-5f39-4921-96ac-c583bd2276930.cached.thread-12 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5701 - 159bfb94-c0c4-4331-b262-31261c33a185 this is handled
+10:24:36,807  INFO |testNoMatchingProtocol| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:36,807  INFO |testNoMatchingProtocol| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:37,806  INFO |testNoMatchingProtocol| - [NodeExtension] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:37,806  INFO |testNoMatchingProtocol| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 1000 ms.
+10:24:37,807  INFO |testNoMatchingProtocol| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTDOWN
+Finished Running Test: testNoMatchingProtocol in 21.064 seconds.
+Started Running Test: testClusterNameMismatch
+10:24:37,808  INFO |testClusterNameMismatch| - [WanThrottlingAcknowledger] testClusterNameMismatch - [LOCAL] [A] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:37,809  INFO |testClusterNameMismatch| - [logo] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:37,809  INFO |testClusterNameMismatch| - [system] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:37,809  INFO |testClusterNameMismatch| - [system] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5701
+10:24:37,809  INFO |testClusterNameMismatch| - [system] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Cluster name: A
+10:24:37,809  INFO |testClusterNameMismatch| - [NodeExtension] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:37,809  INFO |testClusterNameMismatch| - [NodeExtension] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:37,822  WARN |testClusterNameMismatch| - [CPSubsystem] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:37,825  INFO |testClusterNameMismatch| - [EnterpriseJetServiceBackend] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:37,830  INFO |testClusterNameMismatch| - [Diagnostics] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:37,830  INFO |testClusterNameMismatch| - [LifecycleService] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTING
+10:24:37,830  INFO |testClusterNameMismatch| - [JetExtension] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Jet is enabled
+10:24:37,830  INFO |testClusterNameMismatch| - [ClusterService] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5701 - f2e57cba-cdb0-480b-bb7f-e1cde4c62522 this
+]
+
+10:24:37,830  INFO |testClusterNameMismatch| - [LifecycleService] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTED
+10:24:37,830  INFO |testClusterNameMismatch| - [PartitionStateManager] testClusterNameMismatch - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:37,832  INFO |testClusterNameMismatch| - [WanThrottlingAcknowledger] testClusterNameMismatch - [LOCAL] [B] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:37,832  INFO |testClusterNameMismatch| - [logo] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:37,832  INFO |testClusterNameMismatch| - [system] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:37,832  INFO |testClusterNameMismatch| - [system] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5801
+10:24:37,832  INFO |testClusterNameMismatch| - [system] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Cluster name: B
+10:24:37,832  INFO |testClusterNameMismatch| - [NodeExtension] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:37,832  INFO |testClusterNameMismatch| - [NodeExtension] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:37,833  INFO |testClusterNameMismatch| - [HealthMonitor] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.HealthMonitor - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=74.5G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=293.2M, heap.memory.free=705.8M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=29.32%, heap.memory.used/max=29.32%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=0.00%, load.system=100.00%, load.systemAverage=28.84, thread.count=46, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:37,867  WARN |testClusterNameMismatch| - [CPSubsystem] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:37,871  INFO |testClusterNameMismatch| - [EnterpriseJetServiceBackend] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:37,874  INFO |testClusterNameMismatch| - [Diagnostics] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:37,874  INFO |testClusterNameMismatch| - [LifecycleService] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTING
+10:24:37,875  INFO |testClusterNameMismatch| - [JetExtension] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Jet is enabled
+10:24:37,875  INFO |testClusterNameMismatch| - [ClusterService] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5801 - f4987abd-3726-4e0d-873d-f59dfca8234a this
+]
+
+10:24:37,875  INFO |testClusterNameMismatch| - [LifecycleService] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTED
+10:24:37,875  INFO |testClusterNameMismatch| - [PartitionStateManager] testClusterNameMismatch - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:37,875  INFO |testClusterNameMismatch| - [WanMapTestSupport] testClusterNameMismatch - Filling map dummyMap [0,10)
+10:24:37,877  INFO |testClusterNameMismatch| - [HealthMonitor] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.HealthMonitor - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=74.5G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=303.3M, heap.memory.free=695.7M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=30.33%, heap.memory.used/max=30.33%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=14.29%, load.system=100.00%, load.systemAverage=28.84, thread.count=69, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:37,878  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-f4987abd-3726-4e0d-873d-f59dfca8234a, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], alive=true}
+10:24:37,878  INFO |testClusterNameMismatch| - [WanProtocolNegotiationOperation] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] WAN protocol negotiation from (A,[127.0.0.1]:5701) failed because of cluster name mismatch. 
+10:24:37,879  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-f2e57cba-cdb0-480b-bb7f-e1cde4c62522, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], alive=true}
+10:24:37,986  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-4 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], alive=false}
+10:24:37,986  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], alive=false}
+10:24:37,986  WARN |testClusterNameMismatch| - [WanConnectionManager] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Failed to establish a connection to a WAN endpoint
+com.hazelcast.enterprise.wan.impl.connection.WanConnectionException: WAN protocol negotiation failed for cluster name B-wrong and target [127.0.0.1]:5801 with status CLUSTER_NAME_MISMATCH
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.negotiateWanProtocol(WanConnectionManager.java:412) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.connectAndNegotiate(WanConnectionManager.java:352) ~[classes/:?]
+	at com.hazelcast.internal.util.ConcurrencyUtil.getOrPutSynchronized(ConcurrencyUtil.java:120) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnectionByTargetAddress(WanConnectionManager.java:307) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnection(WanConnectionManager.java:218) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.DefaultWanBatchSender.send(DefaultWanBatchSender.java:42) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.sendBatch(WanBatchPublisher.java:317) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.tryMakeProgress(WanBatchPublisher.java:199) [classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.run(WanBatchPublisher.java:145) [classes/:?]
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+10:24:47,878  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-2 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-f4987abd-3726-4e0d-873d-f59dfca8234a, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], alive=true}
+10:24:47,879  INFO |testClusterNameMismatch| - [WanProtocolNegotiationOperation] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] WAN protocol negotiation from (A,[127.0.0.1]:5701) failed because of cluster name mismatch. 
+10:24:47,879  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-f2e57cba-cdb0-480b-bb7f-e1cde4c62522, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], alive=true}
+10:24:47,980  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-2 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], alive=false}
+10:24:47,980  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-2 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], alive=false}
+10:24:47,980  WARN |testClusterNameMismatch| - [WanConnectionManager] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-2 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Failed to establish a connection to a WAN endpoint
+com.hazelcast.enterprise.wan.impl.connection.WanConnectionException: WAN protocol negotiation failed for cluster name B-wrong and target [127.0.0.1]:5801 with status CLUSTER_NAME_MISMATCH
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.negotiateWanProtocol(WanConnectionManager.java:412) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.connectAndNegotiate(WanConnectionManager.java:352) ~[classes/:?]
+	at com.hazelcast.internal.util.ConcurrencyUtil.getOrPutSynchronized(ConcurrencyUtil.java:120) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnectionByTargetAddress(WanConnectionManager.java:307) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnection(WanConnectionManager.java:218) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.DefaultWanBatchSender.send(DefaultWanBatchSender.java:42) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.sendBatch(WanBatchPublisher.java:317) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.handleWanBatchResponse(WanBatchPublisher.java:357) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.lambda$sendBatch$0(WanBatchPublisher.java:320) ~[classes/:?]
+	at com.hazelcast.spi.impl.DeserializingCompletableFuture$DeserializingBiConsumer.accept(DeserializingCompletableFuture.java:393) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+10:24:57,836  INFO |testClusterNameMismatch| - [HealthMonitor] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.HealthMonitor - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=71.5G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=320.8M, heap.memory.free=678.1M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=32.08%, heap.memory.used/max=32.08%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=0.00%, load.system=100.00%, load.systemAverage=28.65, thread.count=85, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=10, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=2, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:57,878  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-2 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-f4987abd-3726-4e0d-873d-f59dfca8234a, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], alive=true}
+10:24:57,878  INFO |testClusterNameMismatch| - [WanProtocolNegotiationOperation] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] WAN protocol negotiation from (A,[127.0.0.1]:5701) failed because of cluster name mismatch. 
+10:24:57,878  INFO |testClusterNameMismatch| - [MockServer] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-f2e57cba-cdb0-480b-bb7f-e1cde4c62522, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], alive=true}
+10:24:57,879  INFO |testClusterNameMismatch| - [HealthMonitor] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.HealthMonitor - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=71.5G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=321.5M, heap.memory.free=677.4M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=32.14%, heap.memory.used/max=32.14%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=14.29%, load.system=100.00%, load.systemAverage=28.65, thread.count=86, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=243, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=2, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:57,914  INFO |testClusterNameMismatch| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTTING_DOWN
+10:24:57,915  INFO |testClusterNameMismatch| - [MigrationManager] hz.ClusterB-1bfb3c4e-a4cb-43fa-baee-efba79d1cbc50.cached.thread-7 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5801 - f4987abd-3726-4e0d-873d-f59dfca8234a this is handled
+10:24:57,915  INFO |testClusterNameMismatch| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:57,915  INFO |testClusterNameMismatch| - [MockServer] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], alive=false}
+10:24:57,915  INFO |testClusterNameMismatch| - [MockServer] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=f4987abd-3726-4e0d-873d-f59dfca8234a], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=f2e57cba-cdb0-480b-bb7f-e1cde4c62522], alive=false}
+10:24:57,915  INFO |testClusterNameMismatch| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:57,915  WARN |testClusterNameMismatch| - [WanConnectionManager] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-2 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Failed to establish a connection to a WAN endpoint
+com.hazelcast.enterprise.wan.impl.connection.WanConnectionException: WAN protocol negotiation failed for cluster name B-wrong and target [127.0.0.1]:5801
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.negotiateWanProtocol(WanConnectionManager.java:412) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.connectAndNegotiate(WanConnectionManager.java:352) ~[classes/:?]
+	at com.hazelcast.internal.util.ConcurrencyUtil.getOrPutSynchronized(ConcurrencyUtil.java:120) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnectionByTargetAddress(WanConnectionManager.java:307) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.connection.WanConnectionManager.getConnection(WanConnectionManager.java:218) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.DefaultWanBatchSender.send(DefaultWanBatchSender.java:42) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.sendBatch(WanBatchPublisher.java:317) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.handleWanBatchResponse(WanBatchPublisher.java:357) ~[classes/:?]
+	at com.hazelcast.enterprise.wan.impl.replication.WanBatchPublisher.lambda$sendBatch$0(WanBatchPublisher.java:320) ~[classes/:?]
+	at com.hazelcast.spi.impl.DeserializingCompletableFuture$DeserializingBiConsumer.accept(DeserializingCompletableFuture.java:393) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750) [?:1.8.0_311]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_311]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) [hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+Caused by: com.hazelcast.core.MemberLeftException: Endpoint [127.0.0.1]:5801 has left
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationMonitor$OnEndpointLeftTask.run0(InvocationMonitor.java:375) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationMonitor$MonitorTask.run(InvocationMonitor.java:255) ~[hazelcast-5.1-SNAPSHOT.jar:5.1-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_311]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_311]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[?:1.8.0_311]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_311]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_311]
+10:24:57,917  INFO |testClusterNameMismatch| - [NodeExtension] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:57,917  INFO |testClusterNameMismatch| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 3 ms.
+10:24:57,917  INFO |testClusterNameMismatch| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTDOWN
+10:24:57,917  INFO |testClusterNameMismatch| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTTING_DOWN
+10:24:57,917  INFO |testClusterNameMismatch| - [MigrationManager] hz.ClusterA-88d16624-2745-43ce-94c1-68b29c7b98ac0.cached.thread-12 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5701 - f2e57cba-cdb0-480b-bb7f-e1cde4c62522 this is handled
+10:24:57,917  INFO |testClusterNameMismatch| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:57,917  INFO |testClusterNameMismatch| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:58,917  INFO |testClusterNameMismatch| - [NodeExtension] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:58,918  INFO |testClusterNameMismatch| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 1001 ms.
+10:24:58,918  INFO |testClusterNameMismatch| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTDOWN
+Finished Running Test: testClusterNameMismatch in 21.111 seconds.
+Started Running Test: testSerializationVersion
+10:24:58,919  INFO |testSerializationVersion| - [WanThrottlingAcknowledger] testSerializationVersion - [LOCAL] [A] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:58,920  INFO |testSerializationVersion| - [logo] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:58,920  INFO |testSerializationVersion| - [system] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:58,920  INFO |testSerializationVersion| - [system] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5701
+10:24:58,920  INFO |testSerializationVersion| - [system] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Cluster name: A
+10:24:58,920  INFO |testSerializationVersion| - [NodeExtension] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:58,921  INFO |testSerializationVersion| - [NodeExtension] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:58,933  WARN |testSerializationVersion| - [CPSubsystem] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:58,936  INFO |testSerializationVersion| - [EnterpriseJetServiceBackend] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:58,938  INFO |testSerializationVersion| - [Diagnostics] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:58,938  INFO |testSerializationVersion| - [LifecycleService] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTING
+10:24:58,938  INFO |testSerializationVersion| - [JetExtension] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Jet is enabled
+10:24:58,938  INFO |testSerializationVersion| - [ClusterService] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5701 - eeef70ea-433c-4b2b-8fce-1e448d399916 this
+]
+
+10:24:58,938  INFO |testSerializationVersion| - [LifecycleService] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is STARTED
+10:24:58,938  INFO |testSerializationVersion| - [PartitionStateManager] testSerializationVersion - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:58,939  INFO |testSerializationVersion| - [WanThrottlingAcknowledger] testSerializationVersion - [LOCAL] [B] [5.1-SNAPSHOT] Using throttling WAN acknowledgement strategy with pending invocation threshold 50000
+10:24:58,939  INFO |testSerializationVersion| - [logo] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+10:24:58,939  INFO |testSerializationVersion| - [system] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Copyright (c) 2008-2021, Hazelcast, Inc. All Rights Reserved.
+10:24:58,939  INFO |testSerializationVersion| - [system] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Enterprise 5.1-SNAPSHOT (20220119 - 9fa69ca, 4d6b666) starting at [127.0.0.1]:5801
+10:24:58,939  INFO |testSerializationVersion| - [system] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Cluster name: B
+10:24:58,939  INFO |testSerializationVersion| - [NodeExtension] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Checking Hazelcast Enterprise license...
+10:24:58,939  INFO |testSerializationVersion| - [NodeExtension] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] License{allowedNumberOfNodes=99, expiryDate=Dec/31/2099 23:59:59, featureList=[ Management Center, Clustered JMX, Clustered REST, Security, WAN Replication, High Density Memory, Hot Restart/Persistence, Rolling Upgrade, Streaming Management Center, Streaming Lossless Cluster Restart, Streaming Job Upgrades, Streaming Enterprise, Cluster Client Filtering, CP Subsystem Persistence ], type=null, companyName=null, ownerEmail=null, keyHash=bULryNRZ+5JBhHq3xrvELoJG648/RmwEBu/UQBu3j5c=, No Version Restriction}
+10:24:58,940  INFO |testSerializationVersion| - [HealthMonitor] hz.ClusterA-501845cf-2e87-46e5-9fb9-8c78ff00f1f70.HealthMonitor - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=71.3G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=332.8M, heap.memory.free=666.2M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=33.27%, heap.memory.used/max=33.27%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=16.67%, load.system=100.00%, load.systemAverage=28.65, thread.count=46, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:58,953  WARN |testSerializationVersion| - [CPSubsystem] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+10:24:58,956  INFO |testSerializationVersion| - [EnterpriseJetServiceBackend] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Setting number of cooperative threads and default parallelism to 2
+10:24:58,958  INFO |testSerializationVersion| - [Diagnostics] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+10:24:58,958  INFO |testSerializationVersion| - [LifecycleService] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTING
+10:24:58,958  INFO |testSerializationVersion| - [JetExtension] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Jet is enabled
+10:24:58,958  INFO |testSerializationVersion| - [ClusterService] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5801 - 66527b47-6eb9-447b-a295-6a7ec5b31eb0 this
+]
+
+10:24:58,959  INFO |testSerializationVersion| - [LifecycleService] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is STARTED
+10:24:58,959  INFO |testSerializationVersion| - [PartitionStateManager] testSerializationVersion - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Initializing cluster partition table arrangement...
+10:24:58,964  INFO |testSerializationVersion| - [HealthMonitor] hz.ClusterB-d090ec37-e9d5-4ed8-83af-3658968d13a90.HealthMonitor - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] processors=16, physical.memory.total=377.6G, physical.memory.free=71.3G, swap.space.total=4.0G, swap.space.free=3.9G, heap.memory.used=342.5M, heap.memory.free=656.5M, heap.memory.total=999.0M, heap.memory.max=999.0M, heap.memory.used/total=34.26%, heap.memory.used/max=34.26%, minor.gc.count=44, minor.gc.time=1591ms, major.gc.count=3, major.gc.time=180ms, load.process=3.57%, load.system=100.00%, load.systemAverage=28.65, thread.count=69, thread.peakCount=438, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=1, executor.q.priorityOperation.size=0, operations.completed.count=0, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=1, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=2, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+10:24:58,990  INFO |testSerializationVersion| - [MockServer] hz.ClusterA-501845cf-2e87-46e5-9fb9-8c78ff00f1f70.cached.thread-4 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5801-66527b47-6eb9-447b-a295-6a7ec5b31eb0, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=eeef70ea-433c-4b2b-8fce-1e448d399916], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=66527b47-6eb9-447b-a295-6a7ec5b31eb0], alive=true}
+10:24:58,992  INFO |testSerializationVersion| - [MockServer] hz.ClusterB-d090ec37-e9d5-4ed8-83af-3658968d13a90.priority-generic-operation.thread-0 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Created connection to endpoint: [127.0.0.1]:5701-eeef70ea-433c-4b2b-8fce-1e448d399916, connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=66527b47-6eb9-447b-a295-6a7ec5b31eb0], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=eeef70ea-433c-4b2b-8fce-1e448d399916], alive=true}
+10:24:59,164  INFO |testSerializationVersion| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTTING_DOWN
+10:24:59,164  INFO |testSerializationVersion| - [MigrationManager] hz.ClusterB-d090ec37-e9d5-4ed8-83af-3658968d13a90.cached.thread-4 - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5801 - 66527b47-6eb9-447b-a295-6a7ec5b31eb0 this is handled
+10:24:59,165  INFO |testSerializationVersion| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:59,165  INFO |testSerializationVersion| - [MockServer] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5801, uuid=66527b47-6eb9-447b-a295-6a7ec5b31eb0], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5701, uuid=eeef70ea-433c-4b2b-8fce-1e448d399916], remoteEndpoint=[address=[127.0.0.1]:5801, uuid=66527b47-6eb9-447b-a295-6a7ec5b31eb0], alive=false}
+10:24:59,165  INFO |testSerializationVersion| - [MockServer] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Removed connection to endpoint: [address=[127.0.0.1]:5701, uuid=eeef70ea-433c-4b2b-8fce-1e448d399916], connection: MockConnection{localEndpoint=[address=[127.0.0.1]:5801, uuid=66527b47-6eb9-447b-a295-6a7ec5b31eb0], remoteEndpoint=[address=[127.0.0.1]:5701, uuid=eeef70ea-433c-4b2b-8fce-1e448d399916], alive=false}
+10:24:59,165  INFO |testSerializationVersion| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:59,166  INFO |testSerializationVersion| - [NodeExtension] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:59,166  INFO |testSerializationVersion| - [Node] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 2 ms.
+10:24:59,166  INFO |testSerializationVersion| - [LifecycleService] main - [127.0.0.1]:5801 [B] [5.1-SNAPSHOT] [127.0.0.1]:5801 is SHUTDOWN
+10:24:59,166  INFO |testSerializationVersion| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTTING_DOWN
+10:24:59,166  INFO |testSerializationVersion| - [MigrationManager] hz.ClusterA-501845cf-2e87-46e5-9fb9-8c78ff00f1f70.cached.thread-2 - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutdown request of Member [127.0.0.1]:5701 - eeef70ea-433c-4b2b-8fce-1e448d399916 this is handled
+10:24:59,166  INFO |testSerializationVersion| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down connection manager...
+10:24:59,166  INFO |testSerializationVersion| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Shutting down node engine...
+10:24:59,244  INFO |testSerializationVersion| - [NodeExtension] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Destroying node NodeExtension.
+10:24:59,244  INFO |testSerializationVersion| - [Node] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] Hazelcast Shutdown is completed in 78 ms.
+10:24:59,244  INFO |testSerializationVersion| - [LifecycleService] main - [127.0.0.1]:5701 [A] [5.1-SNAPSHOT] [127.0.0.1]:5701 is SHUTDOWN
+Finished Running Test: testSerializationVersion in 0.326 seconds.
+Started Running Test: testAggregators_nullCornerCases[BINARY parallelAccumulation=false, postfix=, useIndex=true, usePredicate=true]
+Started Running Test: testAggregators[BINARY parallelAccumulation=false, postfix=, useIndex=true, usePredicate=true]

@@ -6,7 +6,7 @@ Backend+HTML (server):
  - DB, HZ Cloud, Data Model nasil?   +
  - Processing can be done via Jet   -
  - REST API ile iletişim  +
- - Auto issue creation  -
+ - Auto issue creation  ---
  - Log visualization    -
  - Log statistics, timeline, avg mean std loglines etc. per log level   -
  - Visualize    -
