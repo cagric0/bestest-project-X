@@ -14,11 +14,12 @@ type Jenkins struct {
 }
 
 func NewJenkinsConnector() *Jenkins {
-	dumpPattern, _ := regexp.Compile("(THREAD DUMP FOR TEST FAILURE:((.|\n)*?))(INFO|DEBUG|TRACE|WARN|ERROR)")
+	//threadDumpPattern, _ := regexp.Compile("(THREAD DUMP FOR TEST FAILURE:((.|\n)*?))(INFO|DEBUG|TRACE|WARN|ERROR)")
+	threadDumpPattern, _ := regexp.Compile("(?m)(THREAD DUMP FOR TEST FAILURE.*)(.|\n)*?^\"((.|\n)*?)(^.*INFO|DEBUG|TRACE|WARN|ERROR)")
 	metricsPattern, _ := regexp.Compile("Metrics recorded during the test:((.|\\n)*?)Finished Running Test.*")
 
 	return &Jenkins{
-		threadDumpPattern: dumpPattern,
+		threadDumpPattern: threadDumpPattern,
 		metricsPattern:    metricsPattern,
 	}
 }
@@ -65,7 +66,16 @@ func (j *Jenkins) LogParse(logFiles map[string]string, failedTests map[string][]
 }
 
 func (j *Jenkins) extractThreadDump(logFile string, failedTests []string) map[string]string {
-	threadDumps := j.threadDumpPattern.FindAllString(logFile, 20)
+	threadDumps := make([]string, 20)
+	threadDumpsMatches := j.threadDumpPattern.FindAllStringSubmatch(logFile, 20)
+	for _, threadDumpParts := range threadDumpsMatches {
+		threadDump := ""
+		for _, threadDumpPart := range threadDumpParts[1 : len(threadDumpParts)-1] {
+			threadDump += threadDumpPart
+		}
+		strings.TrimSpace(threadDump)
+		threadDumps = append(threadDumps, threadDump)
+	}
 	threadDumpMap := make(map[string]string)
 	for _, threadDump := range threadDumps {
 		for _, testName := range failedTests {
