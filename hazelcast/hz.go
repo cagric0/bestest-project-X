@@ -21,6 +21,7 @@ type HZ struct {
 
 func GetHazelcastClient() *HZ {
 	gob.Register(map[string]string{})
+	gob.Register(map[string]bool{})
 	ctx := context.Background()
 	config := hazelcast.NewConfig()
 	config.Cluster.Name = "pr-3265"
@@ -102,3 +103,9 @@ func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID
 		}
 	}
 }
+
+//func (hz *HZ) GetRepos(ctx context.Context) []string {
+//	testMap, _ := hz.GetMap(ctx, MetadataMap)
+//	repos, _ := testMap.Get(ctx, "repo")
+//	return repos.([]string)
+//}

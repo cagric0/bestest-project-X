@@ -171,6 +171,15 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 	return
 }
 
+//func (a *App) getRepo(w http.ResponseWriter, r *http.Request) {
+//	ctx := context.Background()
+//
+//	repos := a.Hz.GetRepos(ctx)
+//	if err := json.NewEncoder(w).Encode(repos); err != nil {
+//		log.Printf("Error sending response: %v", err)
+//	}
+//}
+
 func (a *App) home(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
 	tests, err := a.Hz.GetTestList(ctx)
