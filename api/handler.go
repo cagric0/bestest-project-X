@@ -16,58 +16,13 @@ import (
 	hz "projectXBackend/hazelcast"
 )
 
-func (a *App) testHandler(w http.ResponseWriter, r *http.Request) {
-	ctx := context.Background()
-	//m, err := a.Hz.GetMap(ctx, hz.MetaDataMap)
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
-	//m.Clear(ctx)
-	//m1 := make(map[string]string)
-	//m1["try"] = "koydukoldu"
-	//m1["allahallah"] = "sasirtti"
-	//m.Put(ctx, "aa", "aaa")
-	//m.Put(ctx, 3, m1)
-	//
-	//v, _ := m.Get(ctx, "aa")
-	//v2, _ := m.Get(ctx, 3)
-	//fmt.Println(v)
-	//fmt.Println(v2)
-	//size, _ := m.Size(ctx)
-	//fmt.Println(size)
-	//w.Write([]byte(v2.(map[string]string)["try"]))
-	//logMap, _ := a.Hz.GetMap(ctx, hz.LogFileMap)
-	////metadataMap, _ := a.Hz.GetMap(ctx, hz.MetaDataMap)
-	//values, err := logMap.GetValues(ctx)
-	//if err != nil {
-	//	fmt.Println(err)
-	//	return
-	//}
-	//for _, a := range values {
-	//	fmt.Println(a.(map[string]string))
-	//}
-
-	//testMap, _ := a.Hz.GetMap(ctx, hz.TestMap)
-	//test1RunIDs := []string{"a", "b", "c", "d"}
-	//test2RunIDs := []string{"e", "f"}
-	//testMap.Put(ctx, "test1", test1RunIDs)
-	//testMap.Put(ctx, "test2", test2RunIDs)
-	//tests, _ := testMap.GetKeySet(ctx)
-	//fmt.Println(tests)
-	logMap, _ := a.Hz.GetMap(ctx, hz.LogMap)
-	//logs := make(map[string]string)
-	//logs["extracted_test_log"] = "Logslogslogslogslogs"
-	//fmt.Println(logs)
-	//logMap.Put(ctx, "test1_a", logs)
-	size, _ := logMap.Size(ctx)
-	fmt.Println(size)
-	var kk map[string]string
-	aaa, err := logMap.Get(ctx, "test1_a")
-	fmt.Println(err)
-	kk = aaa.(map[string]string)
-	//fmt.Println(err)
-	fmt.Println(kk)
-
+type Metadata struct {
+	RunID          string `json:"runID"`
+	NodeId         string `json:"nodeId"`
+	CommitId       string `json:"commitId"`
+	JenkinsJobName string `json:"jenkinsJobName"`
+	GitRepoUrl     string `json:"gitRepoUrl"`
+	Connector      string `json:"connector"`
 }
 
 func (a *App) clearHandler(w http.ResponseWriter, r *http.Request) {
@@ -171,15 +126,6 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 	return
 }
 
-//func (a *App) getRepo(w http.ResponseWriter, r *http.Request) {
-//	ctx := context.Background()
-//
-//	repos := a.Hz.GetRepos(ctx)
-//	if err := json.NewEncoder(w).Encode(repos); err != nil {
-//		log.Printf("Error sending response: %v", err)
-//	}
-//}
-
 func (a *App) home(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
 	tests, err := a.Hz.GetTestList(ctx)
@@ -193,11 +139,8 @@ func (a *App) home(w http.ResponseWriter, r *http.Request) {
 func (a *App) testRunIDs(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
 	testName, _ := mux.Vars(r)["test-name"]
-	testRunIDs, err := a.Hz.GetTestRunIDs(ctx, testName)
-	if err != nil {
-		log.Print("HZ GetTestRunIDs: ", err) // log it
-		return
-	}
+	testRunIDs := a.Hz.GetTestRunIDs(ctx, testName)
+
 	pageData := struct {
 		TestName string
 		RunIDs   interface{}

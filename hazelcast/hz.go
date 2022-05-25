@@ -50,20 +50,12 @@ func (hz *HZ) GetTestList(ctx context.Context) ([]interface{}, error) {
 	return tests, nil
 }
 
-func (hz *HZ) GetTestRunIDs(ctx context.Context, testName string) (interface{}, error) {
+func (hz *HZ) GetTestRunIDs(ctx context.Context, testName string) interface{} {
 	testMap, _ := hz.GetMap(ctx, TestMap)
 
-	testRunIDs, err := testMap.Get(ctx, testName)
-	if err != nil {
-		//return nil, fmt.Errorf("failed to get keys from map %s: %v", err)
-		return nil, nil
-	}
-	testRunIdsMap := testRunIDs.(map[string]bool)
-	testRunIdList := make([]string, 0, len(testRunIdsMap))
-	for k := range testRunIdsMap {
-		testRunIdList = append(testRunIdList, k)
-	}
-	return testRunIdList, nil
+	testRunIDs, _ := testMap.Get(ctx, testName)
+	return testRunIDs
+
 }
 
 func (hz *HZ) GetLogs(ctx context.Context, logIdentifier string) (interface{}, error) {
@@ -83,20 +75,15 @@ func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID
 	for _, testName := range testNames {
 		testRunIDs, _ := testMap.Get(ctx, testName)
 		if testRunIDs == nil {
-			_, err := testMap.Put(ctx, testName, map[string]bool{testRunID: true})
+			_, err := testMap.Put(ctx, testName, []string{testRunID})
 			if err != nil {
 				fmt.Println("AppendTestRunID Create", err)
 				return
 			}
 			continue
 		}
-		testRunIdMap := testRunIDs.(map[string]bool)
-		_, ok := testRunIdMap[testRunID]
-		if ok {
-			continue
-		}
-		testRunIdMap[testRunID] = true
-		_, err := testMap.Put(ctx, testName, testRunIdMap)
+
+		_, err := testMap.Put(ctx, testName, append(testRunIDs.([]string), testRunID))
 		if err != nil {
 			fmt.Println("AppendTestRunID", err)
 			return
@@ -104,8 +91,22 @@ func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID
 	}
 }
 
-//func (hz *HZ) GetRepos(ctx context.Context) []string {
-//	testMap, _ := hz.GetMap(ctx, MetadataMap)
-//	repos, _ := testMap.Get(ctx, "repo")
-//	return repos.([]string)
+//func (hz *HZ) StoreMetadata(ctx context.Context, metadata testNames []string, ) (interface{}, error) {
+//	logMap, _ := hz.GetMap(ctx, LogMap)
+//
+//	logs, err := logMap.Get(ctx, logIdentifier)
+//	if err != nil {
+//		//return nil, fmt.Errorf("failed to get keys from map %s: %v", err)
+//		return nil, nil
+//	}
+//	return logs, nil
 //}
+
+//Metadata struct {
+//RunID          string      `json:"runID"`
+//NodeId         interface{} `json:"nodeId"`
+//CommitId       string      `json:"commitId"`
+//JenkinsJobName string      `json:"jenkinsJobName"`
+//GitRepoUrl     string      `json:"gitRepoUrl"`
+//Connector      string      `json:"connector"`
+//} `json:"metadata"`
