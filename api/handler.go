@@ -103,10 +103,17 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 			}
 			// Read entire file content, giving us little control but
 			// making it very simple. No need to close the file.
-			file, _ = os.Open(filePath)
+			file, err = os.Open(filePath)
+			fmt.Println("FilePath", filePath)
+			if err != nil {
+				fmt.Println("FilePathErr", err)
 
+				fmt.Println("888")
+			}
 			filebytes, err := ioutil.ReadAll(file)
 			if err != nil {
+				fmt.Println("ReadAll", err)
+
 				fmt.Println("8")
 
 				fmt.Fprintf(w, "Unable to read file: %v\n", err)
