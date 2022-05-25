@@ -85,7 +85,8 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 			}
 			filePath := fmt.Sprintf("./uploads/%s", fileHeader.Filename)
 			if err := a.createFile(file, filePath); err != nil {
-				fmt.Println(err)
+				fmt.Fprintf(w, "Unable to create file: %v\n", err)
+
 				return
 			}
 			// Read entire file content, giving us little control but
@@ -94,7 +95,8 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 
 			filebytes, err := ioutil.ReadAll(file)
 			if err != nil {
-				fmt.Println(err)
+				fmt.Fprintf(w, "Unable to read file: %v\n", err)
+
 				return
 			}
 			// Convert []byte to string and print to screen
@@ -105,7 +107,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		req.Logfiles = logFiles
 	}
-
+	fmt.Println("AAAAAA")
 	con := req.Metadata["connector"]
 	connector := cn.NewConnector(con)
 	a.Hz.StoreTestNames(ctx, req.FailedTests)

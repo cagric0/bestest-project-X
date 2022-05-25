@@ -68,7 +68,6 @@ func (hz *HZ) StoreTestRunID(ctx context.Context, testNames map[string][]string,
 	for className, testNames := range testNames {
 		for _, testName := range testNames {
 			runIdIdentifier := util.CreateIdentifier(className, testName)
-			fmt.Println("AAA", runIdIdentifier)
 			runIds, _ := testRunIdMap.Get(ctx, runIdIdentifier)
 			if runIds == nil {
 				testRunIdMap.Put(ctx, runIdIdentifier, []string{runID})
@@ -81,18 +80,8 @@ func (hz *HZ) StoreTestRunID(ctx context.Context, testNames map[string][]string,
 
 func (hz *HZ) GetTestRunIDs(ctx context.Context, className string, testName string) interface{} {
 	testRunIdMap, _ := hz.GetMap(ctx, RunIDMap)
-	size, err := testRunIdMap.Size(ctx)
-	if err != nil {
-		return nil
-	}
-	fmt.Println(size)
-	aa, err := testRunIdMap.GetKeySet(ctx)
-	if err != nil {
-		return nil
-	}
-	fmt.Println(aa)
+
 	runIdIdentifier := util.CreateIdentifier(className, testName)
-	fmt.Println("AAA", runIdIdentifier)
 
 	testRunIDs, _ := testRunIdMap.Get(ctx, runIdIdentifier)
 	return testRunIDs
