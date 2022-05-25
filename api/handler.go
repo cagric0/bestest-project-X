@@ -53,7 +53,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 		Logfiles    map[string]string   `json:"log_files,omitempty"`
 	}{}
 	filePaths := make(map[string]string)
-
+	fmt.Println("1")
 	if r.Header.Get("Content-type") == "application/json" {
 		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
@@ -61,8 +61,12 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	} else {
+		fmt.Println("2")
+
 		err := r.ParseMultipartForm(32 << 20) // maxMemory 32MB
 		if err != nil {
+			fmt.Println("3")
+
 			w.WriteHeader(http.StatusBadRequest)
 			fmt.Fprintf(w, "Invalid multipart form request: %v\n", err)
 
@@ -70,21 +74,29 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		err = json.Unmarshal([]byte(r.Form["req"][0]), &req)
 		if err != nil {
+			fmt.Println("4")
+
 			fmt.Fprintf(w, "Incorrect JSON body in the form: %v\n", err)
 			return
 		}
 		logFiles := make(map[string]string)
 
 		for filename, _ := range req.FailedTests {
+			fmt.Println("5")
+
 			// Get file from Form
 			file, fileHeader, err := r.FormFile(filename)
 			if err != nil {
+				fmt.Println("6")
+
 				w.WriteHeader(http.StatusInternalServerError)
 				fmt.Fprintf(w, "Failed to get log file: %v\n", err)
 				return
 			}
 			filePath := fmt.Sprintf("./uploads/%s", fileHeader.Filename)
 			if err := a.createFile(file, filePath); err != nil {
+				fmt.Println("7")
+
 				fmt.Fprintf(w, "Unable to create file: %v\n", err)
 
 				return
@@ -95,12 +107,15 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 
 			filebytes, err := ioutil.ReadAll(file)
 			if err != nil {
+				fmt.Println("8")
+
 				fmt.Fprintf(w, "Unable to read file: %v\n", err)
 
 				return
 			}
 			// Convert []byte to string and print to screen
 			fileContent := string(filebytes)
+			fmt.Println("9")
 
 			logFiles[filename] = fileContent
 			filePaths[filename] = filePath
