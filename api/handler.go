@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
+	"github.com/hazelcast/hazelcast-go-client/types"
 	"html/template"
 	"io"
 	"io/ioutil"
@@ -133,8 +134,14 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 func (a *App) home(w http.ResponseWriter, r *http.Request) {
 	enableCors(w)
 	ctx := context.Background()
+
 	tests, _ := a.Hz.GetTestNames(ctx)
-	if err := json.NewEncoder(w).Encode(tests); err != nil {
+	response := struct {
+		Failures []types.Entry `json:"failures"`
+	}{
+		Failures: tests,
+	}
+	if err := json.NewEncoder(w).Encode(response); err != nil {
 		log.Printf("Error sending response: %v", err)
 	}
 }
