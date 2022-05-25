@@ -21,7 +21,8 @@ def main():
     parser.add_argument('--log-member', metavar='log_member', help='the log lines to filter by member', nargs='?')
     args = parser.parse_args()
     re_log_prefix_pattern = re.compile('^(\d{2}:\d{2}:\d{2},\d{3})\s+(\w+).*\|\s+\-\s+\[(\w+)\]\s+([^\s]+)\s+\-\s+([^\s]+).*')
-    test_log_file = io.StringIO(args.file)
+
+    test_log_file = open(args.file, 'r')
     matching_log_entry = False
     list_accepted_classes = [] if args.log_class is None else args.log_class.split(',')
     list_accepted_levels = accepted_levels(args.log_level)

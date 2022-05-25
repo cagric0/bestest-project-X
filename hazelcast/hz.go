@@ -35,20 +35,6 @@ func GetHazelcastClient() *HZ {
 		fmt.Println(err)
 		panic(err)
 	}
-	//m, err := client.GetMap(ctx, LogMap)
-	//if err != nil {
-	//	fmt.Println(err)
-	//	panic(err)
-	//}
-	//m1, err := client.GetMap(ctx, MetadataMap)
-	//if err != nil {
-	//	fmt.Println(err)
-	//	panic(err)
-	//}
-	//m2, err := client.GetMap(ctx, TestMap)
-	//m.Clear(ctx)
-	//m1.Clear(ctx)
-	//m2.Clear(ctx)
 	return &HZ{client}
 }
 

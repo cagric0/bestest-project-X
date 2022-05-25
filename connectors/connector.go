@@ -5,7 +5,7 @@ import (
 )
 
 type Connector interface {
-	LogParse(logFiles map[string]string, failedTests map[string][]string, runID string) (map[string]map[string]string, error)
+	LogParse(logFiles map[string]string, failedTests map[string][]string, filePaths map[string]string, runID string) (map[string]map[string]string, error)
 }
 
 func NewConnector(connectorType string) Connector {

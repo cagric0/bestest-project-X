@@ -35,6 +35,7 @@ func (a *App) RegisterRoutes() {
 	r.HandleFunc("/log-detail/{log-identifier}/{log-name}", a.testLogDetail).Methods("GET")
 
 	r.HandleFunc("/test", a.testHandler).Methods("GET")
+	r.HandleFunc("/clear", a.clearHandler).Methods("GET")
 	r.HandleFunc("/push", a.pushHandler).Methods("POST")
 
 	a.Server.Handler = r

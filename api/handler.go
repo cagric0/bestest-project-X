@@ -6,9 +6,12 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"html/template"
+	"io"
 	"io/ioutil"
 	"log"
+	"mime/multipart"
 	"net/http"
+	"os"
 	cn "projectXBackend/connectors"
 	hz "projectXBackend/hazelcast"
 )
@@ -67,6 +70,24 @@ func (a *App) testHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func (a *App) clearHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := context.Background()
+	m, err := a.Hz.GetMap(ctx, hz.LogMap)
+	if err != nil {
+		fmt.Println(err)
+		panic(err)
+	}
+	m1, err := a.Hz.GetMap(ctx, hz.MetadataMap)
+	if err != nil {
+		fmt.Println(err)
+		panic(err)
+	}
+	m2, err := a.Hz.GetMap(ctx, hz.TestMap)
+	m.Clear(ctx)
+	m1.Clear(ctx)
+	m2.Clear(ctx)
+}
+
 func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
 	req := struct {
@@ -74,6 +95,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 		FailedTests map[string][]string `json:"failed_tests"` // filename -> file content
 		Logfiles    map[string]string   `json:"log_files,omitempty"`
 	}{}
+	filePaths := make(map[string]string)
 
 	if r.Header.Get("Content-type") == "application/json" {
 		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
@@ -95,26 +117,34 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		logFiles := make(map[string]string)
+
 		for filename, testNames := range req.FailedTests {
 			// Get file from Form
-			file, _, err := r.FormFile(filename)
+			file, fileHeader, err := r.FormFile(filename)
 			if err != nil {
 				w.WriteHeader(http.StatusInternalServerError)
 				fmt.Fprintf(w, "Failed to get log file: %v\n", err)
 				return
 			}
+			filePath := fmt.Sprintf("./uploads/%s", fileHeader.Filename)
+			if err := a.createFile(file, filePath); err != nil {
+				fmt.Println(err)
+				return
+			}
 			// Read entire file content, giving us little control but
 			// making it very simple. No need to close the file.
+			file, _ = os.Open(filePath)
+
 			filebytes, err := ioutil.ReadAll(file)
 			if err != nil {
 				fmt.Println(err)
 				return
 			}
-
 			// Convert []byte to string and print to screen
 			fileContent := string(filebytes)
-			logFiles[filename] = fileContent
 
+			logFiles[filename] = fileContent
+			filePaths[filename] = filePath
 			a.Hz.AppendTestRunID(ctx, testNames, req.Metadata["runID"])
 		}
 		req.Logfiles = logFiles
@@ -125,7 +155,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 
 	runID := req.Metadata["runID"]
 
-	parsedTestLogs, err := connector.LogParse(req.Logfiles, req.FailedTests, runID)
+	parsedTestLogs, err := connector.LogParse(req.Logfiles, req.FailedTests, filePaths, runID)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		fmt.Fprintf(w, "Failed to parse log files: %v\n", err)
@@ -135,12 +165,6 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 	logMap, _ := a.Hz.GetMap(ctx, hz.LogMap)
 	for logIdentifier, logDetailedMap := range parsedTestLogs {
 		_, _ = logMap.Put(ctx, logIdentifier, logDetailedMap)
-	}
-
-	for k, v := range parsedTestLogs {
-		for k1, v1 := range v {
-			fmt.Println(k, k1, v1[0:100])
-		}
 	}
 
 	w.WriteHeader(200)
@@ -236,4 +260,22 @@ func (a *App) createPage(w http.ResponseWriter, page string, data interface{}) {
 	if err != nil {          // if there is an error
 		log.Print("template executing error: ", err) //log it
 	}
+}
+
+func (a *App) createFile(file multipart.File, filePath string) error {
+	// Create a new file in the uploads directory
+	dst, err := os.Create(filePath)
+	if err != nil {
+		return nil
+	}
+
+	defer dst.Close()
+
+	// Copy the uploaded file to the filesystem
+	// at the specified destination
+	_, err = io.Copy(dst, file)
+	if err != nil {
+		return err
+	}
+	return nil
 }
