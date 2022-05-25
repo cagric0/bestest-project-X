@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/hazelcast/hazelcast-go-client/types"
-	"html/template"
 	"io"
 	"io/ioutil"
 	"log"
@@ -76,7 +75,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		logFiles := make(map[string]string)
 
-		for filename, testNames := range req.FailedTests {
+		for filename, _ := range req.FailedTests {
 			// Get file from Form
 			file, fileHeader, err := r.FormFile(filename)
 			if err != nil {
@@ -103,7 +102,6 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 
 			logFiles[filename] = fileContent
 			filePaths[filename] = filePath
-			a.Hz.AppendTestRunID(ctx, testNames, req.Metadata["runID"])
 		}
 		req.Logfiles = logFiles
 	}
@@ -111,6 +109,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 	con := req.Metadata["connector"]
 	connector := cn.NewConnector(con)
 	a.Hz.StoreTestNames(ctx, req.FailedTests)
+	a.Hz.StoreTestRunID(ctx, req.FailedTests, req.Metadata["runID"])
 
 	//a.Hz.StoreMetadata(ctx, req.Metadata, req.FailedTests)
 	runID := req.Metadata["runID"]
@@ -122,10 +121,7 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	logMap, _ := a.Hz.GetMap(ctx, hz.LogMap)
-	for logIdentifier, logDetailedMap := range parsedTestLogs {
-		_, _ = logMap.Put(ctx, logIdentifier, logDetailedMap)
-	}
+	a.Hz.StoreLogs(ctx, parsedTestLogs)
 
 	w.WriteHeader(200)
 	return
@@ -149,82 +145,37 @@ func (a *App) home(w http.ResponseWriter, r *http.Request) {
 func (a *App) testRunIDs(w http.ResponseWriter, r *http.Request) {
 	enableCors(w)
 	ctx := context.Background()
-	testName, _ := mux.Vars(r)["test-name"]
-	testRunIDs := a.Hz.GetTestRunIDs(ctx, testName)
+	testName, _ := mux.Vars(r)["method-name"]
+	className, _ := mux.Vars(r)["class-name"]
+	testRunIDs := a.Hz.GetTestRunIDs(ctx, className, testName)
 
-	pageData := struct {
-		TestName string
-		RunIDs   interface{}
+	response := struct {
+		TestRunIds []string `json:"testRunIds"`
 	}{
-		TestName: testName,
-		RunIDs:   testRunIDs,
+		TestRunIds: testRunIDs.([]string),
 	}
-	a.createPage(w, "testrun", pageData)
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		log.Printf("Error sending response: %v", err)
+	}
 }
 
 func (a *App) testLogs(w http.ResponseWriter, r *http.Request) {
 	enableCors(w)
 	ctx := context.Background()
-	logIdentifier, _ := mux.Vars(r)["log-identifier"]
+	testName, _ := mux.Vars(r)["method-name"]
+	className, _ := mux.Vars(r)["class-name"]
+	runID, _ := mux.Vars(r)["runId"]
 
-	logs, err := a.Hz.GetLogs(ctx, logIdentifier)
+	logs, err := a.Hz.GetLogs(ctx, className, testName, runID)
 	if err != nil {
 		log.Print("HZ GetLogs: ", err) // log it
 		return
 	}
 
-	logMap := logs.(map[string]string)
-	logNames := make([]string, 0, len(logMap))
-	for k := range logMap {
-		logNames = append(logNames, k)
+	if err := json.NewEncoder(w).Encode(logs.(map[string]string)); err != nil {
+		log.Printf("Error sending response: %v", err)
 	}
 
-	pageData := struct {
-		LogIdentifier string
-		LogNames      interface{}
-	}{
-		LogIdentifier: logIdentifier,
-		LogNames:      logNames,
-	}
-	a.createPage(w, "logs", pageData)
-}
-
-func (a *App) testLogDetail(w http.ResponseWriter, r *http.Request) {
-	enableCors(w)
-	ctx := context.Background()
-	logIdentifier, _ := mux.Vars(r)["log-identifier"]
-	logName, _ := mux.Vars(r)["log-name"]
-
-	logs, err := a.Hz.GetLogs(ctx, logIdentifier)
-	if err != nil {
-		log.Print("HZ GetLogs: ", err) // log it
-		return
-	}
-
-	logMap := logs.(map[string]string)
-	logDetail := logMap[logName]
-
-	pageData := struct {
-		LogIdentifier string
-		LogName       string
-		LogDetail     string
-	}{
-		LogIdentifier: logIdentifier,
-		LogName:       logName,
-		LogDetail:     logDetail,
-	}
-	a.createPage(w, "logDetail", pageData)
-}
-
-func (a *App) createPage(w http.ResponseWriter, page string, data interface{}) {
-	t, err := template.ParseFiles("template/" + page + ".html") //parse the html file homepage.html
-	if err != nil {                                             // if there is an error
-		log.Print("template parsing error: ", err) // log it
-	}
-	err = t.Execute(w, data) //execute the template and pass it the HomePageVars struct to fill in the gaps
-	if err != nil {          // if there is an error
-		log.Print("template executing error: ", err) //log it
-	}
 }
 
 func (a *App) createFile(file multipart.File, filePath string) error {

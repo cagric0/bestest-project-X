@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/hazelcast/hazelcast-go-client"
 	"github.com/hazelcast/hazelcast-go-client/types"
+	"projectXBackend/util"
 	"time"
 )
 
@@ -44,7 +45,12 @@ func (hz *HZ) StoreTestNames(ctx context.Context, testNames map[string][]string)
 	testMap, _ := hz.GetMap(ctx, TestMap)
 
 	for className, testNames := range testNames {
-		testMap.Put(ctx, className, testNames)
+		cTestName, _ := testMap.Get(ctx, className)
+		if cTestName == nil {
+			testMap.Put(ctx, className, testNames)
+			continue
+		}
+		testMap.Put(ctx, className, removeDuplicateStr(append(testNames, cTestName.([]string)...)))
 	}
 }
 
@@ -56,18 +62,54 @@ func (hz *HZ) GetTestNames(ctx context.Context) ([]types.Entry, error) {
 	return tests, nil
 }
 
-func (hz *HZ) GetTestRunIDs(ctx context.Context, testName string) interface{} {
-	testMap, _ := hz.GetMap(ctx, RunIDMap)
+func (hz *HZ) StoreTestRunID(ctx context.Context, testNames map[string][]string, runID string) {
+	testRunIdMap, _ := hz.GetMap(ctx, RunIDMap)
 
-	testRunIDs, _ := testMap.Get(ctx, testName)
-	return testRunIDs
-
+	for className, testNames := range testNames {
+		for _, testName := range testNames {
+			runIdIdentifier := util.CreateIdentifier(className, testName)
+			fmt.Println("AAA", runIdIdentifier)
+			runIds, _ := testRunIdMap.Get(ctx, runIdIdentifier)
+			if runIds == nil {
+				testRunIdMap.Put(ctx, runIdIdentifier, []string{runID})
+				continue
+			}
+			testRunIdMap.Put(ctx, runIdIdentifier, removeDuplicateStr(append([]string{runID}, runIds.([]string)...)))
+		}
+	}
 }
 
-func (hz *HZ) GetLogs(ctx context.Context, logIdentifier string) (interface{}, error) {
+func (hz *HZ) GetTestRunIDs(ctx context.Context, className string, testName string) interface{} {
+	testRunIdMap, _ := hz.GetMap(ctx, RunIDMap)
+	size, err := testRunIdMap.Size(ctx)
+	if err != nil {
+		return nil
+	}
+	fmt.Println(size)
+	aa, err := testRunIdMap.GetKeySet(ctx)
+	if err != nil {
+		return nil
+	}
+	fmt.Println(aa)
+	runIdIdentifier := util.CreateIdentifier(className, testName)
+	fmt.Println("AAA", runIdIdentifier)
+
+	testRunIDs, _ := testRunIdMap.Get(ctx, runIdIdentifier)
+	return testRunIDs
+}
+
+func (hz *HZ) StoreLogs(ctx context.Context, parsedTestLogs map[string]map[string]string) {
 	logMap, _ := hz.GetMap(ctx, LogMap)
 
-	logs, err := logMap.Get(ctx, logIdentifier)
+	for identifier, logs := range parsedTestLogs {
+		_, _ = logMap.Put(ctx, identifier, logs)
+	}
+}
+
+func (hz *HZ) GetLogs(ctx context.Context, className string, testName string, runID string) (interface{}, error) {
+	logMap, _ := hz.GetMap(ctx, LogMap)
+
+	logs, err := logMap.Get(ctx, util.CreateIdentifier(className, testName, runID))
 	if err != nil {
 		//return nil, fmt.Errorf("failed to get keys from map %s: %v", err)
 		return nil, nil
@@ -75,48 +117,23 @@ func (hz *HZ) GetLogs(ctx context.Context, logIdentifier string) (interface{}, e
 	return logs, nil
 }
 
-func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID string) {
-	testMap, _ := hz.GetMap(ctx, RunIDMap)
+//func (hz *HZ) StoreMetadata(ctx context.Context, metadata map[string]string, testNames []string) {
+//	metadataMap, _ := hz.GetMap(ctx, MetadataMap)
+//
+//	for _, testName := range testNames {
+//		logIdentifier := testName + "_" + metadata["runID"]
+//		metadataMap.Put(ctx, logIdentifier, metadata)
+//	}
+//}
 
-	for _, testName := range testNames {
-		testRunIDs, _ := testMap.Get(ctx, testName)
-		if testRunIDs == nil {
-			_, err := testMap.Put(ctx, testName, []string{testRunID})
-			if err != nil {
-				fmt.Println("AppendTestRunID Create", err)
-				return
-			}
-			continue
-		}
-
-		_, err := testMap.Put(ctx, testName, append(testRunIDs.([]string), testRunID))
-		if err != nil {
-			fmt.Println("AppendTestRunID", err)
-			return
+func removeDuplicateStr(strSlice []string) []string {
+	allKeys := make(map[string]bool)
+	list := []string{}
+	for _, item := range strSlice {
+		if _, value := allKeys[item]; !value {
+			allKeys[item] = true
+			list = append(list, item)
 		}
 	}
-}
-
-func (hz *HZ) StoreMetadata(ctx context.Context, metadata map[string]string, testNames []string) {
-	metadataMap, _ := hz.GetMap(ctx, MetadataMap)
-
-	for _, testName := range testNames {
-		logIdentifier := testName + "_" + metadata["runID"]
-		metadataMap.Put(ctx, logIdentifier, metadata)
-	}
-}
-
-type T struct {
-	Metadata struct {
-		RunID          string      `json:"runID"`
-		NodeId         interface{} `json:"nodeId"`
-		CommitId       string      `json:"commitId"`
-		JenkinsJobName string      `json:"jenkinsJobName"`
-		GitRepoUrl     string      `json:"gitRepoUrl"`
-		Connector      string      `json:"connector"`
-	} `json:"metadata"`
-	FailedTests struct {
-		ComHazelcastExecutorExecutorServiceTestOutputTxt []string `json:"com.hazelcast.executor.ExecutorServiceTest-output.txt"`
-		ComHazelcastExecutorSmallClusterTestOutputTxt    []string `json:"com.hazelcast.executor.SmallClusterTest-output.txt"`
-	} `json:"failed_tests"`
+	return list
 }

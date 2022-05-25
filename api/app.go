@@ -30,9 +30,8 @@ func (a *App) RegisterRoutes() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", a.home).Methods("GET")
-	r.HandleFunc("/test-runs/{test-name}", a.testRunIDs).Methods("GET")
-	r.HandleFunc("/test-logs/{log-identifier}", a.testLogs).Methods("GET")
-	r.HandleFunc("/log-detail/{log-identifier}/{log-name}", a.testLogDetail).Methods("GET")
+	r.HandleFunc("/tests/{class-name}/{method-name}", a.testRunIDs).Methods("GET")
+	r.HandleFunc("/tests/{class-name}/{method-name}/{runId}", a.testLogs).Methods("GET")
 
 	r.HandleFunc("/clear", a.clearHandler).Methods("GET")
 	r.HandleFunc("/push", a.pushHandler).Methods("POST")
