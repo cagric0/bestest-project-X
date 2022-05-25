@@ -26,6 +26,7 @@ type Metadata struct {
 }
 
 func (a *App) clearHandler(w http.ResponseWriter, r *http.Request) {
+	enableCors(w)
 	ctx := context.Background()
 	m, err := a.Hz.GetMap(ctx, hz.LogMap)
 	if err != nil {
@@ -44,6 +45,7 @@ func (a *App) clearHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
+	enableCors(w)
 	ctx := context.Background()
 	req := struct {
 		Metadata    map[string]string   `json:"metadata"`
@@ -107,7 +109,9 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 
 	con := req.Metadata["connector"]
 	connector := cn.NewConnector(con)
+	a.Hz.StoreTestNames(ctx, req.FailedTests)
 
+	//a.Hz.StoreMetadata(ctx, req.Metadata, req.FailedTests)
 	runID := req.Metadata["runID"]
 
 	parsedTestLogs, err := connector.LogParse(req.Logfiles, req.FailedTests, filePaths, runID)
@@ -127,16 +131,16 @@ func (a *App) pushHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) home(w http.ResponseWriter, r *http.Request) {
+	enableCors(w)
 	ctx := context.Background()
-	tests, err := a.Hz.GetTestList(ctx)
-	if err != nil {
-		log.Print("HZ GetTestList: ", err) // log it
-		return
+	tests, _ := a.Hz.GetTestNames(ctx)
+	if err := json.NewEncoder(w).Encode(tests); err != nil {
+		log.Printf("Error sending response: %v", err)
 	}
-	a.createPage(w, "homepage", tests)
 }
 
 func (a *App) testRunIDs(w http.ResponseWriter, r *http.Request) {
+	enableCors(w)
 	ctx := context.Background()
 	testName, _ := mux.Vars(r)["test-name"]
 	testRunIDs := a.Hz.GetTestRunIDs(ctx, testName)
@@ -152,6 +156,7 @@ func (a *App) testRunIDs(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) testLogs(w http.ResponseWriter, r *http.Request) {
+	enableCors(w)
 	ctx := context.Background()
 	logIdentifier, _ := mux.Vars(r)["log-identifier"]
 
@@ -178,6 +183,7 @@ func (a *App) testLogs(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) testLogDetail(w http.ResponseWriter, r *http.Request) {
+	enableCors(w)
 	ctx := context.Background()
 	logIdentifier, _ := mux.Vars(r)["log-identifier"]
 	logName, _ := mux.Vars(r)["log-name"]
@@ -230,4 +236,8 @@ func (a *App) createFile(file multipart.File, filePath string) error {
 		return err
 	}
 	return nil
+}
+
+func enableCors(w http.ResponseWriter) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 }

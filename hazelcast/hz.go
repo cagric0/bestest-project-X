@@ -12,6 +12,7 @@ import (
 const (
 	LogMap      = "log"
 	MetadataMap = "metadata"
+	RunIDMap    = "runid"
 	TestMap     = "tests"
 )
 
@@ -39,19 +40,24 @@ func GetHazelcastClient() *HZ {
 	return &HZ{client}
 }
 
-func (hz *HZ) GetTestList(ctx context.Context) ([]interface{}, error) {
+func (hz *HZ) StoreTestNames(ctx context.Context, testNames map[string][]string) {
 	testMap, _ := hz.GetMap(ctx, TestMap)
 
-	tests, err := testMap.GetKeySet(ctx)
-	if err != nil {
-		//return nil, fmt.Errorf("failed to get keys from map %s: %v", err)
-		return nil, err
+	for className, testNames := range testNames {
+		testMap.Put(ctx, className, testNames)
 	}
+}
+
+func (hz *HZ) GetTestNames(ctx context.Context) ([]types.Entry, error) {
+	testMap, _ := hz.GetMap(ctx, TestMap)
+	classNames, _ := testMap.GetKeySet(ctx)
+	tests, _ := testMap.GetAll(ctx, classNames...)
+
 	return tests, nil
 }
 
 func (hz *HZ) GetTestRunIDs(ctx context.Context, testName string) interface{} {
-	testMap, _ := hz.GetMap(ctx, TestMap)
+	testMap, _ := hz.GetMap(ctx, RunIDMap)
 
 	testRunIDs, _ := testMap.Get(ctx, testName)
 	return testRunIDs
@@ -70,7 +76,7 @@ func (hz *HZ) GetLogs(ctx context.Context, logIdentifier string) (interface{}, e
 }
 
 func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID string) {
-	testMap, _ := hz.GetMap(ctx, TestMap)
+	testMap, _ := hz.GetMap(ctx, RunIDMap)
 
 	for _, testName := range testNames {
 		testRunIDs, _ := testMap.Get(ctx, testName)
@@ -91,22 +97,26 @@ func (hz *HZ) AppendTestRunID(ctx context.Context, testNames []string, testRunID
 	}
 }
 
-//func (hz *HZ) StoreMetadata(ctx context.Context, metadata testNames []string, ) (interface{}, error) {
-//	logMap, _ := hz.GetMap(ctx, LogMap)
-//
-//	logs, err := logMap.Get(ctx, logIdentifier)
-//	if err != nil {
-//		//return nil, fmt.Errorf("failed to get keys from map %s: %v", err)
-//		return nil, nil
-//	}
-//	return logs, nil
-//}
+func (hz *HZ) StoreMetadata(ctx context.Context, metadata map[string]string, testNames []string) {
+	metadataMap, _ := hz.GetMap(ctx, MetadataMap)
 
-//Metadata struct {
-//RunID          string      `json:"runID"`
-//NodeId         interface{} `json:"nodeId"`
-//CommitId       string      `json:"commitId"`
-//JenkinsJobName string      `json:"jenkinsJobName"`
-//GitRepoUrl     string      `json:"gitRepoUrl"`
-//Connector      string      `json:"connector"`
-//} `json:"metadata"`
+	for _, testName := range testNames {
+		logIdentifier := testName + "_" + metadata["runID"]
+		metadataMap.Put(ctx, logIdentifier, metadata)
+	}
+}
+
+type T struct {
+	Metadata struct {
+		RunID          string      `json:"runID"`
+		NodeId         interface{} `json:"nodeId"`
+		CommitId       string      `json:"commitId"`
+		JenkinsJobName string      `json:"jenkinsJobName"`
+		GitRepoUrl     string      `json:"gitRepoUrl"`
+		Connector      string      `json:"connector"`
+	} `json:"metadata"`
+	FailedTests struct {
+		ComHazelcastExecutorExecutorServiceTestOutputTxt []string `json:"com.hazelcast.executor.ExecutorServiceTest-output.txt"`
+		ComHazelcastExecutorSmallClusterTestOutputTxt    []string `json:"com.hazelcast.executor.SmallClusterTest-output.txt"`
+	} `json:"failed_tests"`
+}
